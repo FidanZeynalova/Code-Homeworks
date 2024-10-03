@@ -1,0 +1,68 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+.box{
+    width: 1370px;
+    height: 100px;
+    background-color: rgb(175, 175, 231);
+    color: white;
+    margin-left: -10px;
+    margin-top: 1px;
+    padding: 20px;
+    
+}
+@font-face {
+    font-family: MyRobotoFont;
+    src: url(../Assets/Roboto-Bold.ttf);
+}
+p{
+    font-family: MyRobotoFont;
+    src: url(../Assets/Roboto-Bold.ttf);
+    font-size: x-large;
+}
+@font-face{
+    font-family: MyRobotoFont;
+    src: url(../Assets/Roboto-LightItalic.ttf);
+}
+.box2{
+    width: 600px;
+    height: 120px;
+    background-color: yellowgreen;
+    border: 3px solid green;
+    margin: 20px;
+    margin-left: 400px;
+    padding: 10px;
+    font-family: MyRobotoFont;
+    src: url(../Assets/Roboto-LightItalic.ttf);
+    
+}
+
+@font-face{
+    font-family: MyRobotoFont;
+    src: url(../Assets/Roboto-BoldItalic.ttf);
+}
+.box3{
+    width: 250px;
+    height: 80px;
+    background-color: rgb(238, 58, 58);
+    border: 3px solid rgb(143, 5, 35);
+    border-radius: 7%;
+    padding: 10px;
+    margin-left: 550px;
+    padding-left: 50px;
+    font-family: MyRobotoFont;
+    src: url(../Assets/Roboto-BoldItalic.ttf);
+}
+.box4{
+    width: 1370px;
+    height: 250px;
+    background-color: darkcyan;
+    padding: 10px;
+    margin: 10px;
+    margin-left: -10px
+}
+body{
+    background-color: antiquewhite;
+}
