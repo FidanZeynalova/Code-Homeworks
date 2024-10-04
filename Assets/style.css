@@ -66,3 +66,10 @@ p{
 body{
     background-color: antiquewhite;
 }
+.parag{
+    
+        font-family: MyRobotoFont;
+        src: url(../Assets/Roboto-Italic.ttf);
+    
+
+}

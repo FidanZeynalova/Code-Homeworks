@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap');
 *{
     margin : 0;
     padding : 0;
@@ -31,10 +32,10 @@ p{
     margin-left: 20px;
     font-size: xx-large
 }
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@110.5,300..700&display=swap');
 .text{
     margin-left: 20px;
     margin-top: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
 }
 
@@ -43,4 +44,8 @@ p{
     height: 40px;
     background-color: rgb(84, 84, 211);
     color: white;
+}
+.text{
+    font-size: 17px;
+
 }
