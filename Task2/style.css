@@ -1,51 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap');
-*{
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
+@import url("https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: gainsboro;
-   
+body {
+  background-color: gainsboro;
 }
-button{
-    width: 100px;
-    height: 40px;
-    background-color: rgb(247, 239, 168);
-    color: rgb(25, 116, 116);
-    border: none;
-    border-radius: 10px;
-    margin:20px;
-    font-size: larger;
+button {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(247, 239, 168);
+  color: rgb(25, 116, 116);
+  border: none;
+  border-radius: 10px;
+  margin: 20px;
+  font-size: larger;
 }
-.feature{
-    width: 400px;
-    height: 400px;
-    background-color: white;
-    border-radius: 10px;
-    border: none;
-    margin: 0px auto;
-    margin-top: 60px;
+.feature {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  margin: 0px auto;
+  margin-top: 60px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-p{
-    margin-left: 20px;
-    font-size: xx-large
+p {
+  margin-left: 20px;
+  font-size: xx-large;
 }
-.text{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
+.text {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.btn{
-    width: 150px;
-    height: 40px;
-    background-color: rgb(84, 84, 211);
-    color: white;
+.btn {
+  width: 150px;
+  height: 40px;
+  background-color: rgb(84, 84, 211);
+  color: white;
 }
-.text{
-    font-size: 17px;
-
+.text {
+  font-size: 17px;
 }
