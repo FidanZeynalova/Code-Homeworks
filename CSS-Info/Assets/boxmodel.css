@@ -34,14 +34,12 @@ p{
     margin: 20px;
     margin-left: 400px;
     padding: 10px;
-    font-family: MyRobotoFont;
-    src: url(../Assets/Roboto-LightItalic.ttf);
     
 }
 
 @font-face{
     font-family: MyRobotoFont;
-    src: url(../Assets/Roboto-BoldItalic.ttf);
+    src: url(../CSS-BoxModel/MyFonts/Roboto-BoldItalic.ttf);
 }
 .box3{
     width: 250px;
@@ -51,9 +49,7 @@ p{
     border-radius: 7%;
     padding: 10px;
     margin-left: 550px;
-    padding-left: 50px;
-    font-family: MyRobotoFont;
-    src: url(../Assets/Roboto-BoldItalic.ttf);
+    padding-left: 50px;;
 }
 .box4{
     width: 1370px;
@@ -66,10 +62,4 @@ p{
 body{
     background-color: antiquewhite;
 }
-.parag{
-    
-        font-family: MyRobotoFont;
-        src: url(../Assets/Roboto-Italic.ttf);
-    
 
-}
