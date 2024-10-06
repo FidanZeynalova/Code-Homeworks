@@ -1,120 +1,148 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-header {
-  background-color: rgba(128, 128, 128, 0.164);
-  height: 550px;
+body{
+  background-color: rgba(128, 128, 128, 0.26);
 }
-#grad {
-  background-color: orange;
-  background-image: linear-gradient(
-    to right,
-    rgb(252, 170, 19),
-    pink,
-    deeppink,
-    rgb(173, 17, 43),
-    rgb(8, 135, 253));
-    position: fixed;
-    width: 1350px;
-}
-ul {
-  display: inline-block;
-  margin: 10px;
-}
-li {
-  display: inline-block;
-  margin: 20px;
-  font-size: 20px;
-  color: white;
-}
-.navbar {
+.navbar{
+  width: 1400px;
   height: 100px;
-  
+  background-color: orange;
+  background-image: linear-gradient(to right,rgb(252, 170, 19),pink,deeppink,rgb(173, 17, 43),rgb(8, 135, 253));
+margin-left: -10px;
+margin-top: -17px;
+position: fixed;
 }
-
-.cards {
-  width: 500px;
-  background-color: rgb(214, 214, 214);
-  margin: 0px auto;
-  border-radius: 10%;
-  display: block;
-  position: relative;
-}
-
-.card {
-  width: 100%;
-  position: relative;
-}
-
-.image {
-  width: 100%;
-
-}
-
-.image img {
-  width: 100%;
-  border-radius: 10%;
-}
-
-.arrow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(49, 83, 238);
-  opacity: 0;
-  font-size: 40px;
-  text-align: center;
-  padding-top: 90px;
-  color: white;
-  transition: 0.3s all;
-  border-radius: 10%;
-}
-
-.card:hover .arrow {
-  opacity: 0.6;
-}
-h1 {
-  margin: 30px;
-  margin-left: 520px;
-}
-.icon {
-  width: 50px;
-  height: 50px;
-  background-color: rgb(2, 1, 0);
-  border-radius: 50%;
-  margin-left: 860px;
-  margin-top: 100px;
-  position: fixed;
-}
-.fa-gear {
-  font-size: 30px;
-  display: flex;
-  padding: 10px;
-  color: white;
-}
-.box {
-  width: 250px;
-  height: 300px;
+li{
   display: inline-block;
-  background-color: rgb(31, 150, 110);
-  margin: 10px;
-  border-radius: 10%;
-  margin-left: 150px;
-  margin-top: 130px;
+  margin: 15px;
+  font-size: 20px;
+  margin-top: 40px;
+  padding: 10px;
+}
+@font-face{
+  font-family: mypoppinsfonts;
+  src: url(../Assets/mypoppinsfonts/Poppins-BlackItalic.ttf);
+}
+.text{
+  margin-top: 110px;
+  margin-left: 480px;
+  position: absolute;
+  font-family: mypoppinsfonts;
+  font-size: 20px;
+}
+.card{
+  margin-left: 500px;
+  margin-top: 170px;
+  position: absolute;
+}
+img{
+  width: 400px;
+  height: 300px;
+}
+.bg-hover{
+  width: 400px;
+  height: 300px;
+  background-color: blue;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 170px;
+  font-size: 60px;
+  padding-top: 120px;
+  padding-left: 180px;
+  opacity: 0;
+}
+.bg-hover:hover{
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+
+.icon{
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 530px;
+  margin-left: 1280px;
+  position: fixed;
+
+}
+.fa-gear{
+  color: white;
+  position: relative;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 40px;
+}
+.box1{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: gainsboro;
+  margin-top: 600px;
+  margin-left: 100px;
+  background-color: red;
+  border-radius: 3%;
+}
+#img{
+  width: 300px;
+  height: 200px;
+  border-radius: 3%;
+}
+.text1{
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.box2{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: gainsboro;
+  margin-top: 600px;
+  margin-left: 500px;
+  background-color: red;
+  border-radius: 3%;
+}
+.text2{
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.box3{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: gainsboro;
+  margin-top: 600px;
+  margin-left: 900px;
+  background-color: red;
+  border-radius: 3%;
+}
+.text3{
+  margin-left: 20px;
+  margin-top: 15px;
 }
 .fa-heart{
-    color: black;
-    position: fixed;
-    margin-left: 160px;
-    margin-top: -15px;
+  position: absolute;
+  font-size: 30px;
+  margin-left: -80px;
+  margin-top: 10px;
 }
 .fa-share-nodes{
-margin: 20px;
-position: fixed; 
+  position: absolute;
+  font-size: 30px;
+  margin-left: -40px;
+  margin-top: 10px;
 }
-
-
+.end{
+  width: 1400px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  margin-top: 1000px;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+}
