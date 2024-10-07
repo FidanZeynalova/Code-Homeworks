@@ -1,48 +1,56 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: rgba(128, 128, 128, 0.26);
 }
-.navbar{
-  width: 1400px;
+.navbar {
+  width: 100%;
   height: 100px;
   background-color: orange;
-  background-image: linear-gradient(to right,rgb(252, 170, 19),pink,deeppink,rgb(173, 17, 43),rgb(8, 135, 253));
-margin-left: -10px;
-margin-top: -17px;
-position: fixed;
+  background-image: linear-gradient(
+    to right,
+    rgb(252, 170, 19),
+    pink,
+    deeppink,
+    rgb(173, 17, 43),
+    rgb(8, 135, 253)
+  );
+  margin-top: -17px;
+  position: fixed;
+  z-index: 1000;
 }
-li{
+li {
   display: inline-block;
   margin: 15px;
   font-size: 20px;
   margin-top: 40px;
   padding: 10px;
 }
-@font-face{
+@font-face {
   font-family: mypoppinsfonts;
   src: url(../Assets/mypoppinsfonts/Poppins-BlackItalic.ttf);
 }
-.text{
+.text {
   margin-top: 110px;
   margin-left: 480px;
   position: absolute;
   font-family: mypoppinsfonts;
   font-size: 20px;
 }
-.card{
+
+.card {
   margin-left: 500px;
   margin-top: 170px;
   position: absolute;
 }
-img{
+img {
   width: 400px;
   height: 300px;
 }
-.bg-hover{
+.bg-hover {
   width: 400px;
   height: 300px;
   background-color: blue;
@@ -54,29 +62,28 @@ img{
   padding-left: 180px;
   opacity: 0;
 }
-.bg-hover:hover{
+.bg-hover:hover {
   opacity: 0.8;
   transition: all 0.5s ease;
 }
 
-.icon{
+.icon {
   width: 70px;
   height: 70px;
   background-color: black;
   border-radius: 50%;
   margin-top: 530px;
-  margin-left: 1280px;
+  margin-left: 1260px;
   position: fixed;
-
 }
-.fa-gear{
+.fa-gear {
   color: white;
   position: relative;
   margin-left: 15px;
   margin-top: 15px;
   font-size: 40px;
 }
-.box1{
+.box1 {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -86,16 +93,16 @@ img{
   background-color: red;
   border-radius: 3%;
 }
-#img{
+#img {
   width: 300px;
   height: 200px;
   border-radius: 3%;
 }
-.text1{
+.text1 {
   margin-left: 20px;
   margin-top: 15px;
 }
-.box2{
+.box2 {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -105,11 +112,11 @@ img{
   background-color: red;
   border-radius: 3%;
 }
-.text2{
+.text2 {
   margin-left: 20px;
   margin-top: 15px;
 }
-.box3{
+.box3 {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -119,24 +126,24 @@ img{
   background-color: red;
   border-radius: 3%;
 }
-.text3{
+.text3 {
   margin-left: 20px;
   margin-top: 15px;
 }
-.fa-heart{
+.fa-heart {
   position: absolute;
   font-size: 30px;
   margin-left: -80px;
   margin-top: 10px;
 }
-.fa-share-nodes{
+.fa-share-nodes {
   position: absolute;
   font-size: 30px;
   margin-left: -40px;
   margin-top: 10px;
 }
-.end{
-  width: 1400px;
+.end {
+  width: 100%;
   height: 50px;
   background-color: black;
   color: white;
