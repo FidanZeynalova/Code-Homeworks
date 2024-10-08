@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.623);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 5px 10px 20px black;
+
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+ul{
+    font-size: 20px;
+}
+h2{
+    position: absolute;
+    margin-top: 835px;
+    font-size: 30px;
+    margin-left: 30px;
+}
+.text-logo{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+
+
+    .bold{
+        padding: 15px;
+        background-color: black;
+        opacity: 0.7;
+    }
+}
+.xett{
+    width: 96%;
+    height: 1px;
+    margin-left: 30px;
+    background-color: black;
+    position: absolute;
+    margin-top: 875px;
+    opacity: 0.3;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 105px;
+    margin-left: 70px;
+
+}
+.image img{
+    width: 80%;
+}
+.cards{
+    display: flex;
+    position: absolute;
+    margin-top: 910px;
+    gap: 80px;
+}
+.img{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+.cards img{
+    width: 23%;
+    justify-content: space-around;
+}
+.text1{
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+    padding: 7px;
+}
+.text2{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 364px;
+    padding: 7px;
+}
+.text3{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 697px;
+    padding: 7px;
+}
+.text4{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 1030px;
+    padding: 7px;
+}
+.text5{
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 232px;
+    padding: 7px;
+
+}
+.text6{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 364px;
+    margin-top: 232px;
+    padding: 7px;
+}
+.text7{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 697px;
+    margin-top: 232px;
+    padding: 7px;
+}
+.text8{
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    margin-left: 1030px;
+    margin-top: 232px;
+    padding: 7px;
+}
+#About{
+    h2{
+        margin-top: 1400px;
+    }
+}
+.xett1{
+    width: 96%;
+    height: 1px;
+    margin-left: 30px;
+    background-color: black;
+    position: absolute;
+    margin-top: 1440px;
+    opacity: 0.3;
+}
+.parag{
+    position: absolute;
+    margin-top: 1450px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.photos{
+    display: flex;
+    position: absolute;
+    margin-top: 1550px;
+    justify-content: space-around;
+    filter: grayscale(70%);
+}
+.photos img{
+    width: 21%;
+    margin-left: 20px;
+    display: flex;
+
+}
