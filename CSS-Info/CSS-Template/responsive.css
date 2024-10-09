@@ -1,0 +1,72 @@
+
+@media (max-width: 576px) {
+
+    .navbar{
+
+        .siyahi{
+        display: none;
+    }
+    #fa-barss{
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        background-color: transparent;
+        padding: 5px;
+    }
+    #fa-barss:hover{
+
+        background-color: #ccc;
+    }
+
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+    }
+    main{
+        .text-logo{
+            .arc{
+                display: none;
+            }
+        }
+        .image{
+            width: 100% !important;
+        }
+    }
+    .people{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+@media (min-width: 576px) and (max-width:992px) {
+
+
+    main{
+        .architects{
+            .image{
+            width: 90% !important;
+        }
+        }
+        .images{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .image{
+            width: 45% !important;
+        }
+    }
+    .people{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .person{
+            width: 45% !important;
+        }
+    }
+
+    
+}
