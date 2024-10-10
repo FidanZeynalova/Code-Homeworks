@@ -1,0 +1,16 @@
+@media ( min-width: 0px) and (max-width:992px) {
+
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 auto;
+      }
+    }
