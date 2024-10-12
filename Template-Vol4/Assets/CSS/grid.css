@@ -7,3 +7,8 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+
+ .card-image{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
