@@ -1,0 +1,9 @@
+.product-images{
+    display: grid;
+    grid-template-columns: repeat(4,2fr) !important;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
