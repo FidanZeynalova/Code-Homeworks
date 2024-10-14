@@ -3,9 +3,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examples-11</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/a9a74e945c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html{
+    font-size: 62,5%;
+}
+
+.container{
+    max-width: 96rem;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 2rem 2rem;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.hero{
+    max-width: 96rem;
+    margin: 1 auto;
+    display: flex;
+}
+
+h2 i{
+    margin-left: 10rem;
+}
+
+.separator {
+    border-top: 0.1rem solid #000000;
+    margin: 1rem 0;
+}
+
+
+
+
+.aside{
+    max-width: 30%;
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+input{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 0.1rem solid black;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+ul{
+    margin-bottom: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction:column ;
+}
+
+li{
+    margin-bottom: 0.5rem;
+}
+
+
+
+.box{
+    margin: 1rem;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-title i {
+    margin-left: 10rem;
+}
+
+.size-buttons,
+.color-buttons,
+.tag-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem   ;
+    margin-bottom: 2rem;
+}
+
+button.size,
+button.tag {
+    padding: 1rem 2rem;
+    border: 1px solid #b5b4b4;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    max-width: 10rem;
+    box-sizing: border-box;
+}
+
+.color {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.black { background-color: black; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+.orange { background-color: orange; }
+.gray { background-color: gray; }
+.pink { background-color: pink; }
+.purple { background-color: purple; }
+.red { background-color: red; }
+.white { background-color: white; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    max-width: 70%;
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.cards{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: rgb(197, 197, 197);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.product span{
+    color: gold;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.price{
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bold;
+}
+
+    </style>
 </head>
 <body>
-    
+<div class="hero">
+        <aside class="aside">
+            <input type="text" placeholder="Search...">
+            <h2>Categories<i class="fa-solid fa-chevron-down"></i></h2>
+            <ul>
+                <li>Men</li>
+                <li>Women</li>
+                <li>Bags</li>
+                <li>Clothing</li>
+                <li>Shows</li>
+                <li>Accesories</li>
+                <li>Kids</li>
+            </ul>
+
+            <div class="separator"></div>
+
+            <h2>Branding<i class="fa-solid fa-chevron-down"></i></h2>
+            <ul>
+                <li>Luois Vuitton</li>
+                <li>Chanel</li>
+                <li>Hermes</li>
+                <li>Gucci</li>
+            </ul>
+
+            <div class="separator"></div>
+
+            <h2>Filter price<i class="fa-solid fa-chevron-down"></i></h2>
+            <ul>
+                <li>0$-50$</li>
+                <li>50$-100$</li>
+                <li>100$-150$</li>
+                <li>150$-200$</li>
+                <li>200$-250$</li>
+                <li>250$+</li>
+            </ul>
+
+            <div class="separator"></div>
+
+            <div class="box">
+                <div class="section-title">SIZE<i class="fa-solid fa-chevron-down"></i></div>
+                <div class="size-buttons">
+                    <button class="size">XS</button>
+                    <button class="size">S</button>
+                    <button class="size">M</button>
+                    <button class="size">L</button>
+                    <button class="size">XL</button>
+                    <button class="size">2XL</button>
+                    <button class="size">3XL</button>
+                    <button class="size">4XL</button>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="section-title">COLORS<i class="fa-solid fa-chevron-down"></i></div>
+                <div class="color-buttons">
+                    <div class="color black"></div>
+                    <div class="color blue"></div>
+                    <div class="color yellow"></div>
+                    <div class="color orange"></div>
+                    <div class="color gray"></div>
+                    <div class="color pink"></div>
+                    <div class="color purple"></div>
+                    <div class="color red"></div>
+                    <div class="color white"></div>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="section-title">TAGS<i class="fa-solid fa-chevron-down"></i></div>
+                <div class="tag-buttons">
+                    <button class="tag">PRODUCT</button>
+                    <button class="tag">BAGS</button>
+                    <button class="tag">SHOES</button>
+                    <button class="tag">FASHION</button>
+                    <button class="tag">CLOTHING</button>
+                    <button class="tag">HATS</button>
+                    <button class="tag">ACCESSORIES</button>
+                </div>
+            </div>
+        </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    <main class="main">
+        <div class="cards">
+            <div class="card">
+                <img src="assets/images/download.jfif" alt="Image 1">
+                <p>Pique Jacket</p>
+                <div class="product">
+                    <span><i class="fa-regular fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">67.24$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/indir.jpg" alt="Image 1">
+                <p>Cheat Bag</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">43.48$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/indir (2).jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">43.48$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/jacket.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">411.68$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/indir (5).jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">134.48$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/6.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">72.48$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/images7.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">431.48$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/images8.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">419.38$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/images9.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">94.84$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/indir (5).jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">54.86$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/6.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">234.57$</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/images8.jpg" alt="Image 1">
+                <p>Jacket</p>
+                <div class="product">
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-solid fa-star"></i></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                </div>
+                <p class="price">45.98$</p>
+            </div>
+        </div>
+    </main>
+
+
+</div>
+</body>
+</html>
 </body>
 </html>

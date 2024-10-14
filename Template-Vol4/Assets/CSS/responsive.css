@@ -1,12 +1,16 @@
-@media (min-width: 0px) and (max-width:576px){
+@media  (max-width:576px){
 
     #hero .info{
         h1{
             font-size: 60px;
+         
+        }
+        h3{
+            margin-top: 50%;
         }
         button{
             width: 30%;
-            margin-bottom: -15%;
+            margin-top: 100%;
         }
     }
     .product-images{
@@ -41,13 +45,12 @@
                 font-size: 50px;
             }
             button{
-                width: 25%;
+                width: 30%;
             }
         }
         #follow .revert-images{
             display: grid;
             grid-template-columns: repeat(1,1fr) !important;
-            margin-left: 23%;
         }
 
 .contact {
@@ -161,6 +164,7 @@
             .info{
                 margin-top: -40%;
                 margin-left: 20%;
+
             }
         }
         #mission .icons{

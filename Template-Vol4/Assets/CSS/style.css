@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* body{
+  width: 100%;
+} */
 .container {
   width: 100%;
   background-color: #fefaf0;
@@ -15,7 +17,7 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 20px;
     color: black;
     align-items: center;
@@ -85,7 +87,7 @@
       width: 13%;
       position: absolute;
       margin-top: 45%;
-      padding: 15px;
+      padding: 15px ;
       border: none !important;
       border-radius: 45px;
       letter-spacing: 2px;
@@ -119,22 +121,23 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    padding: 70px;
+    padding: 70px ;
+
+    .product .image{
+      overflow: hidden;
+      border-radius: 30%;
+
+    }
 
     .product {
-      width: 100%;
       transform: scale(1);
     }
-    .product:hover img {
-      transform: scale(1.1);
+    .product .image:hover img {
+      transform: scale(1.2);
       border-radius: 30px;
-      border: 1px solid #c4c197;
       transition: all 0.5s ease;
-      overflow: hidden;
     }
-    img {
-      border-radius: 5%;
-    }
+
     span {
       display: flex;
       text-align: center;
@@ -189,16 +192,20 @@
   .right-card {
     .image {
       width: 100%;
-      transition: all 0.6s ease;
       padding: 30px;
+      overflow: hidden !important;
+
+
 
       img {
         border-radius: 10%;
-      overflow: hidden;
+      transition: all 0.6s ease;
+
+
 
       }
     }
-    .image:hover {
+    .image:hover  img{
       transform: scale(1.1);
     }
   }
@@ -400,23 +407,25 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden !important;
+    transition: transform 0.6s ease;
+
+
   }
   .sale-image {
     width: 100%;
-    padding: 70px;
+    padding: 70px ;
 
     img {
       width: 100%;
       height: 100%;
       filter: brightness(0.7);
       border-radius: 20px;
-      transition: transform 0.6s ease;
       transform: scale(1);
     }
   }
 
-  .container:hover img {
+  .container:hover {
     transform: scale(1.1);
   }
   .info {
@@ -470,7 +479,7 @@
     justify-content: center;
     text-align: center;
     gap: 30px;
-    padding: 35px;
+    padding: 35px 0;
     color: #403f2b;
     h3 {
       font-size: 40px;
@@ -532,7 +541,7 @@
 /* Contact Baslayir */
 #Contact {
   background-color: #e8e59b;
-  padding: 40px;
+  padding: 40px 0;
 
   .contact {
     display: flex;
