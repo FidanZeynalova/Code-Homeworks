@@ -1,0 +1,199 @@
+@media (min-width: 0px) and (max-width:576px){
+
+    #hero .info{
+        h1{
+            font-size: 60px;
+        }
+        button{
+            width: 30%;
+            margin-bottom: -15%;
+        }
+    }
+    .product-images{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) !important;
+       
+    }
+
+        .collections .cards{
+            display: grid;
+            grid-template-columns: repeat(1,1fr) !important;
+        }
+
+        #products .container{
+            display: flex;
+            flex-direction: column !important;
+        }
+
+        #collections .cards{
+            .info{
+                margin-top: -40%;
+                margin-left: 20%;
+            }
+        }
+        #mission .icons{
+            display: grid;
+            grid-template-columns: repeat(1,1fr) !important;
+        }
+
+        #sale .container{
+            h1{
+                font-size: 50px;
+            }
+            button{
+                width: 25%;
+            }
+        }
+        #follow .revert-images{
+            display: grid;
+            grid-template-columns: repeat(1,1fr) !important;
+            margin-left: 23%;
+        }
+
+.contact {
+    display: flex;
+    flex-direction: column !important;
+        .left-card{
+            margin-left: 20%;
+           text-align: center;
+        }
+
+        .links{
+            display: flex !important;
+            flex-direction: column !important;
+        }
+}
+}
+
+@media (min-width: 576px) and (max-width:768px){
+    #hero .info{
+        h1{
+            font-size: 80px;
+        }
+        button{
+            width: 30%;
+            margin-bottom: -15%;
+        }
+    }
+    .product-images{
+        display: grid;
+        grid-template-columns: repeat(2,1fr) !important;
+       
+    }
+
+        .collections .cards{
+            display: grid;
+            grid-template-columns: repeat(1,1fr) !important;
+        }
+
+        #products .container{
+            display: flex;
+            flex-direction: column !important;
+        }
+
+        #collections .cards{
+            .info{
+                margin-top: -40%;
+                margin-left: 20%;
+            }
+        }
+        #mission .icons{
+            display: grid;
+            grid-template-columns: repeat(2,1fr) !important;
+        }
+
+        #sale .container{
+            h1{
+                font-size: 50px;
+            }
+            button{
+                width: 25%;
+            }
+        }
+        #follow .revert-images{
+            display: grid;
+            grid-template-columns: repeat(2,1fr) !important;
+            margin-left: 13%;
+        }
+
+.contact {
+    display: flex;
+    flex-direction: column !important;
+        .left-card{
+            margin-left: 20%;
+           text-align: center;
+        }
+
+        .links{
+            display: flex !important;
+            flex-direction: column !important;
+        }
+}
+}
+
+@media (min-width: 768px) and (max-width:992px){
+    #hero .info{
+        h1{
+            font-size: 100px;
+        }
+        button{
+            width: 25%;
+            margin-bottom: -15%;
+        }
+    }
+    .product-images{
+        display: grid;
+        grid-template-columns: repeat(3,1fr) !important;
+       
+    }
+
+        .collections .cards{
+            display: grid;
+            grid-template-columns: repeat(2,1fr) !important;
+        }
+
+        #products .container{
+            display: flex;
+            flex-direction: column !important;
+        }
+
+        #collections .cards{
+            .info{
+                margin-top: -40%;
+                margin-left: 20%;
+            }
+        }
+        #mission .icons{
+            display: grid;
+            grid-template-columns: repeat(3,1fr) !important;
+        }
+
+        #sale .container{
+            h1{
+                font-size: 50px;
+            }
+            button{
+                width: 25%;
+            }
+        }
+        #follow .revert-images{
+            display: grid;
+            grid-template-columns: repeat(3,1fr) !important;
+            margin-left: 8%;
+        }
+
+.contact {
+    display: flex;
+    flex-direction: column !important;
+        .left-card{
+            margin-left: 20%;
+           text-align: center;
+        }
+
+        .links{
+            display: flex !important;
+            flex-direction: column !important;
+        }
+}
+
+}
