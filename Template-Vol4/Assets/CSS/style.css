@@ -125,7 +125,13 @@
 
     .product .image{
       overflow: hidden;
-      border-radius: 30%;
+      border-radius: 30px;
+
+      img{
+        width: 100%;
+        height: 100%;
+
+      }
 
     }
 
@@ -191,14 +197,15 @@
   }
   .right-card {
     .image {
-      width: 100%;
-      padding: 30px;
+      width: 80%;
+      /* padding: 30px; */
       overflow: hidden !important;
 
 
 
       img {
-        border-radius: 10%;
+        width: 100%;
+        border-radius: 30px;
       transition: all 0.6s ease;
 
 
@@ -207,6 +214,8 @@
     }
     .image:hover  img{
       transform: scale(1.1);
+      border-radius: 30px;
+
     }
   }
 }
@@ -219,12 +228,22 @@
   padding: 50px;
 
   .cards {
-    width: 100%;
+    width: 80%;
     display: flex;
+    margin: 0px auto;
     justify-content: space-between;
     align-items: center;
-    padding: 70px;
-    gap: 40px;
+    padding: 70px 0;
+
+
+
+    .card{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
   h1 {
     font-size: 50px;
@@ -263,12 +282,6 @@
   .info {
     text-align: center;
     position: absolute;
-    margin-top: -17%;
-    margin-left: 8.5%;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    flex-direction: column;
     gap: 10px;
 
     h2 {
@@ -397,24 +410,26 @@
 }
 
 #sale {
-  overflow: hidden;
+  background-color: #fefaf0;
 
   .container {
-    width: 100%;
-    background-color: #fefaf0;
+    width: 80%;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin: 0px auto;
     overflow: hidden !important;
-    transition: transform 0.6s ease;
+  
 
+ 
 
   }
   .sale-image {
     width: 100%;
-    padding: 70px ;
+    border-radius: 20px;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -422,10 +437,13 @@
       filter: brightness(0.7);
       border-radius: 20px;
       transform: scale(1);
+      transition: transform 0.6s ease;
+      overflow: hidden;
+
     }
   }
 
-  .container:hover {
+  .sale-image:hover img{
     transform: scale(1.1);
   }
   .info {
@@ -472,6 +490,7 @@
 #follow {
   background-color: #e8e59b;
 
+
   .text-head {
     display: flex;
     flex-direction: column;
@@ -491,7 +510,7 @@
   }
   .revert-images {
     width: 80%;
-    margin-left: 7%;
+    margin: 0px auto;
     gap: 20px;
   }
 
@@ -501,7 +520,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-left: 10%;
+   margin: 0px auto;
     overflow: hidden;
 
     img {
@@ -530,7 +549,7 @@
   }
 
   .xett {
-    width: 100%;
+    width: 100% ;
     height: 2px;
     border: 1px solid #403f2b;
     margin-top: 6%;
@@ -545,6 +564,9 @@
 
   .contact {
     display: flex;
+    width: 80%;
+    margin: 0px auto;
+    gap: 100px;
 
     .left-card {
       width: 50%;
@@ -595,7 +617,7 @@
       background-color: transparent;
       color: #403f2b;
       border-radius: 20px;
-      margin-left: 30%;
+      margin-left: 40%;
       border: 1px solid #403f2b;
     }
 
@@ -611,7 +633,7 @@
     flex-direction: row;
     gap: 20px;
     font-size: 23px;
-    margin-top: 13%;
+    /* margin-top: 13%; */
     /* margin-left: 10%; */
 
     .card {
@@ -632,10 +654,15 @@
 #footer{
   background-color: #e8e59b;
 
+
+  .footer{
+    width: 80%;
+    margin: 0px auto;
+  }
 .info{
   display: flex;
   padding: 50px;
-  gap: 50px;
+  justify-content: space-between;
 }
 .xett {
   width: 100%;
