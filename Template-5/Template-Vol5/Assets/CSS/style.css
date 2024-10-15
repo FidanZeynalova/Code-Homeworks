@@ -315,6 +315,57 @@
     }
 }
 
+#Imza{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfb29c;
+    padding: 60px 0;
+    color: white;
+    .imza{
+    margin: 0px auto;
+    
+
+    .imza-text{
+        width: 55%;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 43px;
+    }
+    .imza-img{
+        width: 16%;
+        margin: 0px auto;
+        padding: 14px 0;
+    }
+}
+}
+
+#footer{
+    color: white;
+ 
+    .purple{
+        background-color: #a996bb;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .black{
+        background-color: #333333;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            color: white;
+        }
+
+    }
+}
+
 
 
 
