@@ -1,0 +1,63 @@
+.logo{
+    font-size: 25px;
+    color: #c3c3c3;
+
+}
+
+.nav-list{
+    ul{
+        @include flex(center,center,15px);
+       a{
+        color: black;
+        font-size: 20px;
+        padding: 10px;
+        &:hover{
+            background-color: #e5e5e5;
+        }
+       }
+    }
+}
+.icon{
+        display: none;
+}
+
+
+// Header'in Responsive
+@media  (max-width:576px) {
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+
+        .fa-bars{
+            font-size: 25px;
+           
+        }
+    }    
+}
+@media  (max-width:768px) {
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        .fa-bars{
+            font-size: 25px;
+           
+        }
+    } 
+}
+@media  (max-width:992px) {
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        .fa-bars{
+           
+            font-size: 25px;  
+        }
+    }
+    
+}

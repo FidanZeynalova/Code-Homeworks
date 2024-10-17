@@ -1,0 +1,123 @@
+ #Getaway .container {
+    // @include flex(center,center,column,20px)
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+
+    h1 {
+        font-size: 60px;
+    }
+    span{
+        font-size: 20px;
+        a{
+            color: black;
+            border-bottom: 1px solid black;
+            padding: 1px;
+
+            &:hover{
+                border-bottom: 1px solid rgb(228, 213, 9);
+            padding: 1px;
+            }
+        }
+    }
+}
+
+.getaway-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 0;
+
+
+
+    .getaway-card {
+        width: 100%;
+        position: relative;
+
+      
+
+        .getaway-img {
+            width: 100%;
+            
+
+            img {
+                width: 100%;
+                filter: brightness(.7);
+            }
+        }
+
+        .getaway-info {
+            width: 80%;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-top: 30px;
+            color: white;
+            border-top: 3px solid  rgba(255,255,255,0.5);
+            
+
+        
+
+            h3 {
+                font-size: 25px;
+                white-space: nowrap;
+            }
+
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Getaway'in Responsive
+
+@media (min-width:0px) and (max-width:576px) {
+    .getaway-cards{
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    #Getaway{
+        h1{
+            font-size: 30px !important;
+            white-space: nowrap;
+    
+            }
+    }
+}
+
+@media (min-width:576px) and (max-width:768px) {
+
+    .getaway-cards{
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    #Getaway{
+        h1{
+            font-size: 40px !important;
+            white-space: nowrap;
+    
+            }
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+
+    .getaway-cards{
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+
+}
+
+@media (min-width:992px) and (max-width:1400px) {
+
+    .getaway-cards{
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+}
