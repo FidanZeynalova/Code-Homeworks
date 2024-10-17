@@ -96,6 +96,14 @@
   text-align: center;
   padding: 60px 0;
 }
+#Collaboration .title-img {
+  width: 100%;
+  height: 100%;
+}
+#Collaboration .title-img img {
+  width: 100%;
+  aspect-ratio: 1.2;
+}
 #Collaboration .text-head {
   font-size: 33px;
   color: black;
@@ -111,6 +119,7 @@
   opacity: 0.5;
 }
 #Collaboration .cards {
+  width: 100%;
   padding: 25px 0;
   display: flex;
   gap: 20px;
@@ -143,6 +152,9 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+}
+#Future .container .card img {
+  aspect-ratio: 1.2;
 }
 #Future .container .card .text-title {
   display: flex;
