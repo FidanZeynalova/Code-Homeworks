@@ -1,0 +1,6 @@
+.container{
+    padding: 30px 0;
+    width: 70%;
+    @include flex(center,space-between);
+    margin: 0px auto;
+}
