@@ -1,0 +1,110 @@
+#About{
+    .about{
+        padding: 30px 0;
+        @include flex(center,center,column,50px);
+        text-align: center;
+
+        .about-title{
+        @include flex(center,center,column,30px);
+        position: relative;
+
+        // &::after{
+        //     content: ""; 
+        //     position: absolute; 
+        //     bottom: 50%; 
+        //     width: 40px; 
+        //     height: 3px; 
+        //     background-color: $button-border-color;
+        // }
+ 
+        h2{
+            font-size: $fontsize-l;
+        }
+        span{
+            font-size: $fontsize-xs;
+        }
+        }
+
+        .about-cards{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+
+            .about-card{
+            display: grid;
+                gap: 50px;
+                @include flex(center,center,column,20px);
+                
+
+                .icon{
+                    border: 1px solid $button-border-color;
+                    border-radius: 50%; 
+                    font-size: $fontsize-m; 
+                    width: 100px; 
+                    height: 100px; 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                transition: all .4s ease;
+
+                }
+
+                .card-title{
+                    @include flex (center,center,column,20px);
+                    h3{
+                        font-size: 25px;
+                    }
+                    span{
+                        font-size: 16px;
+                    }
+                    button{
+                        border: 1px solid $button-border-color;
+                        font-size: 16px;
+                        padding: 13px 10px;
+                        transition: all .4s ease;
+
+                        &:hover{
+                            background-color: $hover-bg-color;
+                            color: $header-text-color;
+                        }
+                    }
+                }
+                &:hover .icon{
+                    background-color: $hover-bg-color;
+                            color: $header-text-color;
+                }
+            }
+        }
+    }
+
+
+
+
+    // About'un Responsive
+    @media (min-width:0px) and (max-width:576px){
+       .about-cards{
+        grid-template-columns: repeat(1,1fr) !important;
+       }
+
+    }
+    
+    @media (min-width:576px) and (max-width:768px){
+   
+        .about-cards{
+            grid-template-columns: repeat(1,1fr) !important;
+           }
+    }
+    
+    @media (min-width:768px) and (max-width:992px){
+     
+        .about-cards{
+            grid-template-columns: repeat(2,1fr) !important;
+           }
+    }
+    
+    @media (min-width:992px) and (max-width:1200px){
+        .about-cards{
+            grid-template-columns: repeat(3,1fr) !important;
+           }
+    }
+}

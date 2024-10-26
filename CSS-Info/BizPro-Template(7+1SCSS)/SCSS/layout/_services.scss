@@ -1,0 +1,89 @@
+#Services{
+    background-color: $services-bg-color;
+    .services{
+        padding: 30px 0;
+        @include flex(center,center,column,50px);
+        text-align: center;
+
+        .services-title{
+        @include flex(center,center,column,30px);
+        position: relative;
+        color: $services-text-color;
+ 
+        h2{
+            font-size: $fontsize-l;
+        }
+        span{
+            font-size: $fontsize-xs;
+        }
+        }
+
+        .services-cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 60px;
+
+
+            .service-card{
+                border: 1px solid $services-icon-color;
+                padding: 50px 0px;
+                color: $services-icon-color;
+                @include flex (center,center,column,20px);
+
+                .icon{
+                    font-size: $fontsize-l;
+                    white-space:nowrap;
+                    @include flex (center,center,column,20px);
+
+                }
+
+                .service-info{
+                 opacity: 0;
+                 transition: all .4s ease;
+
+                 &:hover{
+                    opacity: 1;
+
+                    span{
+                        font-size: $fontsize-s;
+                 transition: all .4s ease;
+                }
+                 }
+                }
+            }
+        }
+    }
+
+
+
+
+     // Services'un Responsive
+     @media (min-width:0px) and (max-width:576px){
+        .services-cards{
+         grid-template-columns: repeat(1,1fr) !important;
+        }
+ 
+     }
+     
+     @media (min-width:576px) and (max-width:768px){
+    
+         .services-cards{
+             grid-template-columns: repeat(1,1fr) !important;
+            }
+     }
+     
+     @media (min-width:768px) and (max-width:992px){
+      
+         .services-cards{
+             grid-template-columns: repeat(2,1fr) !important;
+
+             
+            }
+     }
+     
+     @media (min-width:992px) and (max-width:1200px){
+         .services-cards{
+             grid-template-columns: repeat(2,1fr) !important;
+            }
+     }
+}

@@ -1,0 +1,71 @@
+
+    #client {
+        padding: 30px 0;
+        .container {
+            @include flex(center, center, column, 50px);
+            text-align: center;
+
+            .client-title {
+                @include flex(center,center);
+                position: relative;
+                font-size: 40px;
+                font-weight: bold;
+
+                // &::after {
+                //     content: "";
+                //     width: 25px;
+                //     border: 2px solid $site-logo-color;
+                //     position: absolute;
+                //     bottom: -25px;
+                }
+            }
+
+            .client-info {
+                font-size: 18px;
+                color: gray;
+                width: 75%;
+            }
+
+            .client-about {
+                color: #343434;
+                font-size: 20px;
+                width: 80%;
+            }
+
+            .client-name {
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            .points {
+                cursor: pointer;
+                @include flex(center, center, 10px);
+                font-size: 40px;
+                color: #d6d6d6;
+
+                span:nth-child(1) {
+                    color: #869791;
+                }
+            }
+        }
+    
+
+    // Client Responsive
+    @media (min-width:0px) and (max-width:576px){
+       
+ 
+     }
+     
+     @media (min-width:576px) and (max-width:768px){
+    
+       
+     }
+     
+     @media (min-width:768px) and (max-width:992px){
+      
+         
+     }
+     
+     @media (min-width:992px) and (max-width:1200px){
+       
+     }

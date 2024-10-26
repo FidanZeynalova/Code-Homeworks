@@ -1,0 +1,171 @@
+
+#contact {
+    padding: 30px 0;
+    .container {
+        @include flex(center, center, column, 50px);
+
+        .contact {
+            width: 100%;
+            @include flex(flex-start, center, row, 30px);
+
+            &-left {
+                width: 100%;
+                @include flex(flex-start, center, column, 30px);
+                .head {
+                    font-weight: bold;
+                    font-size: 35px;
+                }
+
+                .parag {
+                    font-size: 18px;
+                    opacity: .8;
+                }
+
+                .links {
+                    width: 100%;
+                    @include flex(flex-start, center, column, 20px);
+                    .link {
+                        width: 100%;
+                        @include flex(center, start, row, 20px);
+
+                    
+
+                        &:hover {
+                            .icon {
+                                background-color: #fff;
+                                color: $button-border-color;
+                            }
+                        }
+                        .icon {
+                            transition: all .3s ease;
+                            @include flex(center, center);
+                            padding: 15px;
+                            background-color: $hover-bg-color;
+                            border: 1px solid $hover-bg-color;
+                            border-radius: 50%;
+                            font-size: 25px;
+                            color: #fff;
+                        }
+
+                        .info {
+                            .name {
+                                font-weight: bold;
+                                margin-bottom: 5px;
+                            }
+                            .text {
+                                // color: $pricing-card-text;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contact-right {
+                width: 100%;
+                @include flex(flex-start, center, column, 30px);
+                .title {
+                    // color: $pricing-card-title-name;
+                    font-weight: bold;
+                    font-size: 35px;
+                }
+                .maps {
+                    width: 100%;
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .contact-main {
+            width: 100%;
+            @include flex(flex-start, center, column, 30px);
+            .title {
+                font-weight: bold;
+                font-size: 35px;
+            }
+            .user-info {
+                width: 100%;
+                form {
+                    @include flex(center, space-between, row, 20px);
+
+                    input {
+                        width: 100%;
+                        padding: 15px;
+                        border: 1px solid #dfdfdf;
+                    }
+                } 
+            }
+            .subject {
+                width: 100%;
+                input {
+                    width: 100%;
+                    padding: 15px;
+                    border: 1px solid #dfdfdf;
+                }
+            }
+            .textarea {
+                width: 100%;
+                textarea {
+                    width: 100%;
+                    padding: 15px;
+                    border: 1px solid #dfdfdf;
+                    height: 300px;
+                }
+            }
+            .button {
+                button {
+                    transition: all .3s ease;
+                    padding: 10px 20px;
+                    background-color: $hover-bg-color;
+                    color: #fff;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: $hover-bg-color;
+                    border: 1px solid $hover-bg-color   ;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+// Contact Responsive
+
+    @media (min-width:0px) and (max-width:576px){
+        .contact{
+           flex-direction: column!important;
+        }
+        .contact-main{
+            flex-direction: column !important;
+        }
+     }
+     
+     @media (min-width:576px) and (max-width:768px){
+        .contact{
+            flex-direction: column!important;
+         }
+         .contact-main{
+             flex-direction: column !important;
+         }
+    
+     }
+     
+     @media (min-width:768px) and (max-width:992px){
+        .contact{
+            flex-direction: column!important;
+         }
+         .contact-main{
+             flex-direction: column !important;
+         }
+     }
+     
+     @media (min-width:992px) and (max-width:1200px){
+        .blog-cards{
+            grid-template-columns: repeat(3,1fr) !important;
+        }
+     }
+}

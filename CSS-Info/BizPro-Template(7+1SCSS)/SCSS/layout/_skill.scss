@@ -1,0 +1,122 @@
+#Skill{
+    background-color: $services-bg-color;
+
+    .skill{
+        @include flex(center,space-between,row,100px);
+        
+        .left-card{
+            img{
+                width: 100%;
+                object-fit: cover;
+                transition: all .5s ease;
+
+                &:hover{
+                   filter: brightness(.5);   
+                }
+            }
+        }
+
+        .right-card{
+            width: 35%;
+            @include flex (start,center,column,20px);
+            font-size: $fontsize-xs;
+            color: white;
+
+          .web{
+            width: 150%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .skill-1{
+                padding: 20px;
+                background-color: white;  
+                transition: all .5s ease;
+                
+                // &:hover .web1{
+                //     transform: translateX(-500px);
+                //     background-color: red;
+                // }
+            }
+          }
+
+          .marketing{
+            width: 150%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .skill-2{
+                padding: 20px;
+                background-color: white;            
+            }
+          }
+
+          .media{
+            width: 150%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .skill-3{
+                padding: 20px;
+                background-color: white;            
+            }
+          }
+
+          .photography{
+            width: 150%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .skill-4{
+                padding: 20px;
+                background-color: white;            
+            }
+          }
+
+          .design{
+            width: 150%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .skill-4{
+                padding: 20px;
+                background-color: white;            
+            }
+          }
+        }
+    }
+
+
+       // Skill'in Responsive
+       @media (min-width:0px) and (max-width:576px){
+      .skill{
+        display: flex;
+        flex-direction: column;
+        
+      }
+ 
+     }
+     
+     @media (min-width:576px) and (max-width:768px){
+    
+        .skill{
+            display: flex;
+            flex-direction: column;
+            
+          }
+     
+     }
+     
+     @media (min-width:768px) and (max-width:992px){
+      
+        
+     }
+     
+     @media (min-width:992px) and (max-width:1200px){
+        
+     }
+}

@@ -1,0 +1,47 @@
+#Season {
+  background-color: black;
+
+
+  .container{
+    @include flex(center, center, 30px, column);
+    margin: 0px auto;
+
+
+  }
+  .season {
+    padding: 20px 0;
+    color: white;
+    &-head {
+      text-align: center;
+      padding: 10px 0;
+      h2 {
+        font-size: 50px;
+        padding: 10px 0;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .card {
+      background-color: white;
+      padding: 10px;
+    }
+    &-images {
+      // width: 60%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 10px 0;
+
+      &-img {
+        // background-color: white;
+        border: 3px solid white;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

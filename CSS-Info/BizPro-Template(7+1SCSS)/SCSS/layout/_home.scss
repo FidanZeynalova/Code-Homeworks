@@ -1,0 +1,36 @@
+#Home{
+    background-image: url("https://preview.colorlib.com/theme/bizpro/images/home/slide-1.jpg");
+    background-position: 50% 50%;
+    object-fit: cover;
+
+    .container{
+        padding: 240px 0;
+        @include flex(center,center);
+        text-align: center;
+
+        .home-title{
+        @include flex(center,center,column,20px);
+        color: $header-text-color;
+
+        h1{
+            font-size: $fontsize-xl;
+        }
+        span{
+            font-size: $fontsize-s;
+        }
+        button{
+            border: 1px solid $button-border-color;
+            color: $header-text-color;
+            padding: 15px 20px;
+            transition: all .5s ease;
+
+            &:hover{
+                background-color: $hover-bg-color;
+                
+            }
+        }
+
+        }
+    }
+
+}

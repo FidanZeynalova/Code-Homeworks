@@ -1,0 +1,151 @@
+#Portfolia{
+
+    .portfolia{
+        padding: 30px 0;
+        @include flex(center,center,column,50px);
+        text-align: center;
+
+        .portfolia-title{
+        @include flex(center,center,column,30px);
+        position: relative;
+        color: $portfolia-text-color;
+        
+
+        &::after{
+            content: ""; 
+            position: absolute; 
+            bottom: 50%; 
+            width: 40px; 
+            height: 3px; 
+            background-color: $button-border-color;
+        }
+ 
+        h2{
+            font-size: $fontsize-l;
+        }
+        span{
+            font-size: $fontsize-xs;
+        }
+        }
+
+        .portfolia-list{
+            ul{
+            // @include flex (center,center,row);
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            li{
+                white-space: nowrap;
+                font-size: 20px;
+            }
+
+            a{
+                color: $portfolia-text-color;
+            @include flex (center,center);
+            font-size: $fontsize-xs;
+            font-weight: bold;
+
+            &:hover{
+                // border-bottom: 1px solid $button-border-color;
+                // padding: 5px 0;
+                color: $hover-bg-color  ;
+            }
+
+            }
+            }
+        }
+
+        .portfolia-cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+
+            .portfolia-card{
+                position: relative;
+
+                .portfolia-img{
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        aspect-ratio: 1.9;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .info{
+                position: absolute;
+                width: 100%;
+                margin: 0px auto;
+                padding: 98px 0;
+                @include flex(center,center,column,20px);
+                background-color: $hover-bg-color;
+                color: $header-text-color;
+                // border: 1px solid rgb(0, 0, 0);
+                top: 0;
+                opacity: 0;
+                transition: all .5s ease;
+                h3{
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                span{
+                    font-size: 14px;
+                }
+
+                &:hover{
+                    opacity: .8;
+                }
+            }
+
+        }
+    }
+
+
+
+    // Portfolia'un Responsive
+    @media (min-width:0px) and (max-width:576px){
+
+        .portfolia-list{
+            ul{
+                grid-template-columns: repeat(2,1fr) !important;
+                gap: 20px;
+            }
+        }
+
+        .portfolia-cards{
+            grid-template-columns: repeat(1,1fr) !important;
+        }
+     }
+     
+     @media (min-width:576px) and (max-width:768px){
+
+        .portfolia-list{
+            ul{
+                grid-template-columns: repeat(2,1fr) !important;
+                gap: 20px;
+            }
+        }
+
+        .portfolia-cards{
+            grid-template-columns: repeat(1,1fr) !important;
+        }
+     }
+     
+     @media (min-width:768px) and (max-width:992px){
+      
+        .portfolia-list{
+            ul{
+                grid-template-columns: repeat(3 ,1fr) !important;
+                gap: 20px;
+            }
+        }
+
+        .portfolia-cards{
+            grid-template-columns: repeat(2,1fr) !important;
+        }
+     }
+     
+     @media (min-width:992px) and (max-width:1200px){
+ 
+     }
+}

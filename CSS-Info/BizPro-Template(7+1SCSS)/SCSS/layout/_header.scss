@@ -1,0 +1,70 @@
+#header{
+    
+    .container{
+        position: fixed;
+        margin-left: 15%;
+        z-index: 1000;
+        // width: 100%; 
+        // background-color: rgba(0, 0, 0, 0.461);
+        // @include flex (center,space-between);
+        // text-align: center;
+        // margin: 0px auto;
+    .nav-list{
+        ul{
+            @include flex (center,center,row,20px);
+
+            a{
+                color: $header-text-color;
+                font-size:$fontsize-xs;
+                &:hover{
+                    color: $hover-bg-color;
+                }
+            }
+        }
+    }
+
+    .icon{
+        display: none;
+    }
+}
+
+
+// Header'in Responsive
+
+@media (min-width:0px) and (max-width:576px){
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        gap: 10px;
+        color: $header-text-color;
+    }
+}
+
+@media (min-width:576px) and (max-width:768px){
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        gap: 10px;
+        color: $header-text-color;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px){
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        gap: 10px;
+        color: $header-text-color;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px){
+  
+}
+}

@@ -1,0 +1,109 @@
+  #pricing {
+        padding: 30px 0;
+        background-color: #f3f3f3;
+
+        .container {
+            @include flex(center, space-between);
+
+            .cards {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+
+                .card {
+                    border: 1px solid rgba(0,0,0,.1);
+                    padding: 25px 0;
+                    background-color: #fff;
+                    @include flex(center, center, column, 25px);
+                    transition: all .5s ease;
+
+                    .card-title {
+                        @include flex(center, center, column, 5px);
+                       .card-head {
+                            color: black;
+                            font-weight: 600;
+                            font-size: 25px;
+                        }
+                        .card-text {
+                            color: black;
+                        }
+                    }
+
+                    .card-cost {
+                        width: 100%;
+                        padding: 20px;
+                        color: #fff;
+                        @include flex(center, center, row, 5px);
+                        font-weight: bold;
+
+                        span {
+                            font-size: 27px;
+                        }
+                    }
+
+                    .card-spans {
+                        width: 100%;
+                        @include flex(center, center, column);
+                        span {
+                            padding: 13px;
+                            text-align: center;
+                            width: 100%;
+                            color:black;
+
+                            &:nth-child(odd) {
+                                background-color: #f3f3f3;
+                            }
+                        }
+                    }
+
+                    .card-button {
+                        transition: all .3s ease;
+                        border: 1px solid $hover-color;
+                        background-color: $hover-bg-color;
+                        padding: 15px 25px;
+                        color: #fff;
+                        font-weight: bold;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: $button-border-color;
+                        }
+                    }
+                    
+                    &:hover {
+                        transform: translateY(-1%);
+                    }
+                }
+            }
+        }
+    }
+
+        // Pricing'in Responsive
+        @media (min-width:0px) and (max-width:576px){
+            .cards {
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+     
+         }
+         
+         @media (min-width:576px) and (max-width:768px){
+        
+            .cards {
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+         }
+         
+         @media (min-width:768px) and (max-width:992px){
+          
+            .cards {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+         }
+         
+         @media (min-width:992px) and (max-width:1200px){
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+         }
+        
