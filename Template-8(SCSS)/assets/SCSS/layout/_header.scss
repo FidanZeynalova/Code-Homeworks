@@ -1,0 +1,117 @@
+#header{
+    background-image: url("https://preview.colorlib.com/theme/bizpro/images/home/slide-1.jpg");
+    background-position: 50% 50%;
+
+    .container{
+ 
+        .logo-head{
+        margin: 0px auto;
+        @include flex(center,center,300px);
+    //     position: fixed;
+    //    top: 30px;
+
+
+        }
+        .nav-list{
+            ul{
+        @include flex(center,space-between,20px,row);
+        font-size: 20px;
+
+        a{
+            color: white;
+
+        &:hover{
+            color: red;
+        }
+        }
+            }
+      
+        }
+
+    }
+
+    .text-head{
+        padding: 260px 0;
+        @include flex(center,center,20px,column);
+        margin: 0px auto;
+        color: white;
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 25px;
+        }
+
+        button{
+            border: 1px solid red;
+            padding: 15px 15px;
+            color: white;
+            transition: all .5s ease;
+
+
+            &:hover{
+                background-color: red;
+                color: white;
+
+            }
+        }
+    }
+    .icon{
+            display: none;
+    }
+}
+
+// Header'in Responsive
+@media  (max-width:576px) {
+    .text-head{
+       text-align: center;
+    }
+     .icon{
+        display: flex !important;
+        color: white;
+
+    
+    }    
+}
+@media  (max-width:768px) {
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        color: white;
+
+        .fa-bars{
+            font-size: 25px;
+           
+        }
+    } 
+}
+@media  (max-width:992px) {
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        color: white;
+        
+        .fa-bars{
+            font-size: 25px;  
+        }
+    }
+    
+}
+@media  (max-width:1200px) {
+    .nav-list{
+        display: none !important;
+    }
+    .icon{
+        display: flex !important;
+        color: white;
+        
+        .fa-bars{
+            font-size: 25px;  
+        }
+    }
+    
+}

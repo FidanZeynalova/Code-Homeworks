@@ -1,0 +1,223 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.container {
+  padding: 30px 0;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0px auto;
+}
+
+#header {
+  background-image: url("https://preview.colorlib.com/theme/bizpro/images/home/slide-1.jpg");
+  background-position: 50% 50%;
+}
+#header .container .logo-head {
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 300px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#header .container .nav-list ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 20px;
+}
+#header .container .nav-list ul a {
+  color: white;
+}
+#header .container .nav-list ul a:hover {
+  color: red;
+}
+#header .text-head {
+  padding: 260px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0px auto;
+  color: white;
+}
+#header .text-head h1 {
+  font-size: 50px;
+}
+#header .text-head p {
+  font-size: 25px;
+}
+#header .text-head button {
+  border: 1px solid red;
+  padding: 15px 15px;
+  color: white;
+  transition: all 0.5s ease;
+}
+#header .text-head button:hover {
+  background-color: red;
+  color: white;
+}
+#header .icon {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .text-head {
+    text-align: center;
+  }
+  .icon {
+    display: flex !important;
+    color: white;
+  }
+}
+@media (max-width: 768px) {
+  .nav-list {
+    display: none !important;
+  }
+  .icon {
+    display: flex !important;
+    color: white;
+  }
+  .icon .fa-bars {
+    font-size: 25px;
+  }
+}
+@media (max-width: 992px) {
+  .nav-list {
+    display: none !important;
+  }
+  .icon {
+    display: flex !important;
+    color: white;
+  }
+  .icon .fa-bars {
+    font-size: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  .nav-list {
+    display: none !important;
+  }
+  .icon {
+    display: flex !important;
+    color: white;
+  }
+  .icon .fa-bars {
+    font-size: 25px;
+  }
+}
+#About .about-title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#About .about-title h1 {
+  font-size: 50px;
+}
+#About .about-title span {
+  width: 70%;
+  font-size: 20px;
+}
+#About .about-cards {
+  padding: 30px 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#About .about-cards .about-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#About .about-cards .about-card:hover .icon {
+  background-color: red;
+  color: white;
+}
+#About .about-cards .about-card .icon {
+  border-radius: 50%;
+  padding: 40px 40px;
+  border: 1px solid red;
+  font-size: 30px;
+  transition: all 0.5s ease;
+}
+#About .about-cards .about-card .about-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#About .about-cards .about-card .about-info h3 {
+  font-size: 25px;
+  white-space: nowrap;
+}
+#About .about-cards .about-card .about-info button {
+  border: 1px solid red;
+  padding: 15px 20px;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s ease;
+}
+#About .about-cards .about-card .about-info button:hover {
+  background-color: red;
+  color: white;
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .about .about-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .about .about-cards .about-card .icon {
+    color: black !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .about .about-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .about .about-cards .about-card .icon {
+    color: black !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .about .about-cards {
+    grid-template-columns: 2fr !important;
+  }
+  .about .about-cards .about-card .icon {
+    color: black !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .about .about-cards {
+    grid-template-columns: 3fr !important;
+  }
+  .about .about-cards .about-card .icon {
+    color: black !important;
+  }
+}
