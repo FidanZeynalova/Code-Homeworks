@@ -15,3 +15,4 @@ function checkFactors(ededler,eded) {
     return true
 }
 console.log(checkFactors([2,3,4,6],12))
+console.log(checkFactors([2,3,4,5],12))
