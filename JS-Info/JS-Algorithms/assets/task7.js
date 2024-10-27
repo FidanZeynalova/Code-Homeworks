@@ -1,0 +1,1 @@
+// 7. Bir function yazin bir reqem qebul edir ve hemin reqemin perfect number olub-olmamasini yoxlayir. Perfect number - ededin ozunden bashqa butun bolenlerinin cemin ededin ozune beraberdir-se o zaman eded perfect number hesab olunur. Meselen 6 -->  1+2+3 =  6, demeli 6 perfect number-dir.

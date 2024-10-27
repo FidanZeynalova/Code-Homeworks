@@ -12,15 +12,15 @@
 
 // 2. 1-dən 10 və 100ə qədər ədədləri yazdır( həmçinin indeksini göstər.) (həmçinin 3-3 artıraraq yaz.)
 
-//  for (i = 1; i <= 10 ; i++){
-//     console.log(i);
+//  for (i = 0; i <= 10 ; i+=3){
+//     console.log({i},i);
 //  }
 
 // Task-3
 
 // 3. geriden yazdir.
 
-// for(i=20;i>=0;i--){
+// for(i=3;i>=0;i--){
 //  console.log(i);
 // }
 

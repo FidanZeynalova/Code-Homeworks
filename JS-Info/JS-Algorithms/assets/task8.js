@@ -1,0 +1,1 @@
+// 8. Bir funksiya yazın. Bir ədədi parametr olaraq qəbul edir. Eger o eded 50den kicikdirse o edede qeder 3-e bolunen, 50-100 araligindadirsa o edede qeder 5e bolunen, 100den boyukdurse o edede qeder 8 e bolunen ededlerin sayini ekrana cixardan bir alqoritm yazin.
