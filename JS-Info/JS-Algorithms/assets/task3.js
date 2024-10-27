@@ -5,3 +5,13 @@
 // console.log(checkFactors([2,3,4,5],12))
 // Expected Output:
 // false
+
+function checkFactors(ededler,eded) {
+    for(let i = 0;i < ededler.length; i ++){
+        if (eded % ededler[i] !== 0) {
+            return false
+        }
+    }
+    return true
+}
+console.log(checkFactors([2,3,4,6],12))

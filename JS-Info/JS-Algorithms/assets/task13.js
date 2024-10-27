@@ -4,10 +4,10 @@
 // : Əgər sifariş məbləği 100-150 TL arasındadırsa, çatdırılma 3 gün ərzindədir və kargo 20 TL-dir.
 // : Sifariş məbləği 100 TL-dən azdırsa, çatdırılma 5 gün ərzində olur və kargo haqqı 30 TL-dir.
 
-let uzv = prompt("Üzvlük statusunuzu daxil edin.")
-let mebleg = Number(prompt("Sifariş məbləğini daxil edin."))
+let uzv = ("Üzvlük statusunuzu daxil edin.")
+let mebleg = Number("Sifariş məbləğini daxil edin.")
 
-if (uzv == "Premium") {
+if (uzv == "Premium" && mebleg > 0) {
     console.log("Sifarişiniz 1 gün ərzində və pulsuz gələcək.");
 }else if(mebleg < 150 && mebleg > 0){
     console.log("Sifarişiniz 2 gün ərzində gələcək");

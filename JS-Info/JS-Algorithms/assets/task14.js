@@ -4,8 +4,8 @@
 // : Əgər resept 5-dən az maddə istifadə edirsə, "Asan" olur. Yağlı maddə yoxdursa, "Sağlam" olur.
 
 
-let madde = Number(prompt("Reseptdə istifadə olunan maddələrin sayını daxil edin."))
-let yagliliq = Number(prompt("Maddədə istifadə olunan yağlılıq olan maddənin sayını daxil edin."))
+let madde = Number("Reseptdə istifadə olunan maddələrin sayını daxil edin.")
+let yagliliq = Number("Maddədə istifadə olunan yağlılıq olan maddənin sayını daxil edin.")
 
 if (madde > 10) {
     if(yagliliq > 3){

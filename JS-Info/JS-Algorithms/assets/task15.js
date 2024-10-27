@@ -5,8 +5,8 @@
 // : Bu şərtlərdən heç biri yerinə yetirilmirsə, müraciət rədd edilir.
 
 
-let age = Number(prompt("Yaşınızı daxil edin."));
-let salary = Number(prompt("Maaşınızı daxil edin."));
+let age = Number("Yaşınızı daxil edin.")
+let salary = Number("Maaşınızı daxil edin.")
 
 if (age >= 25 && age <= 40) {
     if (salary > 5000) {
