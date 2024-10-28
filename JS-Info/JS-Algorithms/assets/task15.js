@@ -5,29 +5,29 @@
 // : Bu şərtlərdən heç biri yerinə yetirilmirsə, müraciət rədd edilir.
 
 
-let age = Number("Yaşınızı daxil edin.")
-let salary = Number("Maaşınızı daxil edin.")
+let age = Number("25") //Yaşınızı daxil edin.
+let salary = Number("-5100") //Maaşınızı daxil edin.
 
 if (age >= 25 && age <= 40) {
     if (salary > 5000) {
-        alert("Mənzil krediti uyğundur.");  
+        console.log("Mənzil krediti uyğundur.");  
     } else {
-        alert("Mənzil krediti uyğun deyil.");
+        console.log("Mənzil krediti uyğun deyil.");
     }
 } else if (age > 40) {
-    if (salary > 7000) {
-        alert("Mənzil krediti uyğundur.");
+    if (salary > 7000 && salary > 0) {
+        console.log("Mənzil krediti uyğundur.");
     } else {
-        alert("Mənzil krediti uyğun deyil.");
+        console.log("Mənzil krediti uyğun deyil.");
     }
-} else if (age < 25) {
+} else if (age < 25 && age > 0) {
     if (salary > 10000) {
-        alert("Mənzil krediti uyğundur.");
+        console.log("Mənzil krediti uyğundur.");
     } else {
-        alert("Mənzil krediti uyğun deyil.");
+        console.log("Mənzil krediti uyğun deyil.");
     }
 } else {
-    alert("Müraciət uyğun deyil.");
+    console.log("Müraciət uyğun deyil.");
 }
 
 

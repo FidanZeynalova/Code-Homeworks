@@ -2,13 +2,12 @@
 
 
 function myFunc(eded) {
-    for ( let i = 0; i < eded; i ++){
         if (eded % 7 == 0) {
             console.log(eded + ",7-yə bölünür.");
         }else{
-        const yuvarlaq = Math.round(eded / 7) * 7
+
+        const yuvarlaq = (Math.round(eded / 7) * 7)
         console.log(yuvarlaq)
         }
-    }
 }
-myFunc(20)
+myFunc(15)

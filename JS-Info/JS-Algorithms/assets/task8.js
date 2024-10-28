@@ -23,4 +23,4 @@ function myFunc(eded) {
 } 
     console.log(count);
 }
-myFunc(11)
+myFunc(15)

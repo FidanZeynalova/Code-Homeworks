@@ -15,4 +15,4 @@ function perfectNumber(eded) {
 
     }
 }
-perfectNumber(12)
+perfectNumber(6)

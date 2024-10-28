@@ -5,22 +5,33 @@
 // : Bonuslar əlavə edildikdən sonra yekun qiymət 100-ü keçə bilməz.
 
 
-let result = Number("İmtahan nəticənizi daxil edin.")
-let fealiyyet = Number("İştirak etdiyiniz fəaliyyət sayını daxil edin.")
+let result = 73 //İmtahan nəticənizi daxil edin.
+let fealiyyet = 4 //İştirak etdiyiniz fəaliyyət sayını daxil edin.
 
 let sum = result;
 
-if (result >= 85 && fealiyyet > 3) {
+if (result >= 85 && fealiyyet > 3 && result <= 100) {
     sum += 5;
+    if (sum >= 100 ) {
+        sum = 100;
+        console.log("Yekun nəticəniz" , sum);
+        
+    }else{
+        console.log("Yekun nəticəniz" , sum);
+        
+    }
 } else if (result >= 70 && result <= 84 && fealiyyet >= 2) {
     sum += 3; 
-} else if (result >= 60 && result <= 69 && fealiyyet == 1) {
+    console.log("Yekun nəticəniz" , sum);
+} else if (result >= 60 && result <= 69 && fealiyyet >= 1) {
     sum += 2; 
+    console.log("Yekun nəticəniz" , sum);
+}else{
+    console.log("Düzgün rəqəm daxil edin.");
+    
 }
-if (sum > 100) {
-    sum = 100;
-}
-let netice = `Yekun nəticəniz ${sum}.`;
-console.log(netice);
+
+// let netice = `Yekun nəticəniz ${sum}.`;
+// console.log(netice);
 
 

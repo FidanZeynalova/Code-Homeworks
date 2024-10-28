@@ -4,9 +4,8 @@
 // : Hava temperaturu 10-20°C arasındadırsa "Gödəkçə geyinin və gəzintiyə çıxın."
 // : Əgər hava temperaturu 10°C-dən aşağıdırsa və axşam saatlarıdırsa (18-24 arası) "Qalın palto geyinin və evdə qalın."
 
-
-let weather = Number(prompt("Hava durumunu daxil edin."))
-let hour = Number(prompt("Saatı daxil edin."))
+ let weather = Number("-8");   //Hava durumunu daxil edin.
+let hour = Number("24");       //Saatı daxil edin.
 
 if (weather > 30 && hour >= 12 && hour <= 15) {
     console.log("Çimərlik geyimi geyinin və üzməyə gedin.");
@@ -19,3 +18,4 @@ if (weather > 30 && hour >= 12 && hour <= 15) {
 }else{
     console.log("Düzgün məlumat daxil edin");
 }
+

@@ -44,4 +44,4 @@ function myFunc(ay) {
             break;
     }
 }
-myFunc(0)
+myFunc(5)

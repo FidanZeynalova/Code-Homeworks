@@ -3,8 +3,7 @@
 function myFunc(eded,herf) {
     let netice =""
     for ( let i = 0; i < eded; i ++){
-        netice += herf
-        
+        netice += herf    
     }
     return netice
 }

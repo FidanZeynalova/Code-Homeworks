@@ -3,8 +3,8 @@
 // 5
 
 const findVowels = function(cumle){
-    // let vowels = ("a","ı","o","u","e","ə","i","ö","ü")
-    let vowel = ("aıoueəiöü")
+    // let vowel = ( "a","ı","o","u","e","ə","i","ö","ü")
+    let vowel = ("a,ı,o,u,e,ə,i,ö,ü")
     let count = 0
     for( i = 0; i < cumle.length; i++){
         if (vowel.includes(cumle[i].toLowerCase())) {
@@ -13,4 +13,4 @@ const findVowels = function(cumle){
     }
     return count
 }
-console.log(findVowels("salam necesen?"))
+console.log(findVowels("salam necesen? Mən Fidan"))
