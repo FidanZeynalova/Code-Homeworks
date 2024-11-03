@@ -12,4 +12,4 @@ function findBigNumber(ededler,eded) {
     }
     return max
 }
-console.log(findBigNumber([11,2,32,4,57,,45,6], 45));
+console.log(findBigNumber([11,2,32,4,57,45,6], 45));

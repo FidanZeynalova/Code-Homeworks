@@ -6,10 +6,10 @@
 
 
 
-let uzv = ("") //Üzvlük statusunuzu daxil edin.
-let mebleg = Number("") //Sifariş məbləğini daxil edin.
+let Premium = true //Üzvlük statusunuzu daxil edin.
+let mebleg = 1500 //Sifariş məbləğini daxil edin.
 
-if (uzv == "Premium" && mebleg > 0) {
+if (Premium == true && mebleg > 0) {
     console.log("Sifarişiniz 1 gün ərzində və pulsuz gələcək.");
 }else if(mebleg > 150 ){
     console.log("Sifarişiniz 2 gün ərzində gələcək");
@@ -20,3 +20,5 @@ if (uzv == "Premium" && mebleg > 0) {
 }else{
     console.log("Düzgün rəqəm daxil edin.");
 }
+
+

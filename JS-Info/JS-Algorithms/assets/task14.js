@@ -4,22 +4,22 @@
 // : Əgər resept 5-dən az maddə istifadə edirsə, "Asan" olur. Yağlı maddə yoxdursa, "Sağlam" olur.
 
 
-let madde = 11 //Reseptdə istifadə olunan maddələrin sayını daxil edin.
+let madde = 9 //Reseptdə istifadə olunan maddələrin sayını daxil edin.
 let yagliliq = 4  //Maddədə istifadə olunan yağlılıq olan maddənin sayını daxil edin.
 
 if (madde > 10) {
+    console.log(madde + " Sağlam deyil.");
     if(yagliliq > 3){
-        console.log(madde + " Sağlam deyil.");
         console.log(yagliliq + " Çətindir")     
     }
 }else if(madde >= 5 && madde <= 10){
+    console.log(madde + " Orta Sağlam ");
     if (yagliliq <= 3 && yagliliq >=1) {
-        console.log(madde + " Orta Sağlam ");
         console.log (yagliliq + " Orta")
     }
 }else if(madde > 0 && madde < 5){
+    console.log(madde + " Sağlam");
     if (yagliliq == 0 ) {
-        console.log(madde + " Sağlam");
         console.log(yagliliq + " Asan")
     }
 }else{
