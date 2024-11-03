@@ -44,9 +44,7 @@ if (cutMaxIndex !== -1 && tekMinIndex !== -1) {
     arr[cutMaxIndex] = arr[tekMinIndex];
     arr[tekMinIndex] = temp;
 }
-// console.log("Cüt ədədlərin maksimumu:", cutMax, "İndeksi:", cutMaxIndex);
-// console.log("Tək ədədlərin minimumu:", tekMin, "İndeksi:", tekMinIndex);
-console.log("Dəyişdirilmiş array:", arr);
+console.log(arr);
 
 
 
