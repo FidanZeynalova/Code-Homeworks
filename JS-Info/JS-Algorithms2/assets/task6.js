@@ -6,7 +6,7 @@ let students = [
     { name: "Davud", scores: [100, 100, 100] } ];
 //    6.1 tələbələr array-ində tələbələrin ortalaması ən yüksək olanı tapan proqram yazın.]
     let topResult = 0 
-    let student = ""
+    let student = " "
     for( let i = 0; i < students.length; i ++){
        let scores = students[i].scores
        let sum = 0
@@ -15,7 +15,7 @@ let students = [
        }
 
        let average = sum / scores.length
-    //    console.log(average);
+       console.log(average);
        if (average > topResult) {
         topResult = average // Ən yüksək ortalama
         student = students[i].name // Ən yüksək ortalaması olan tələbə

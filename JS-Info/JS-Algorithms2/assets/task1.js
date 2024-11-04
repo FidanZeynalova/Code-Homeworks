@@ -12,6 +12,6 @@ for (let i = 0; i < stringA.length; i ++){
 }
 console.log(sum);
 console.log(hasil);
-console.log(average);
+// console.log(average);
 
 

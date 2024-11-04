@@ -1,4 +1,5 @@
-// 5.Verilmiş arrayın cüt ədədlərinin maksimumu ilə tək ədədlərinin minimumunun yerini dəyişən proqram tərtib edin. (custom yaz)
+// 5.Verilmiş arrayın cüt ədədlərinin maksimumu ilə tək ədədlərinin minimumunun yerini dəyişən proqram tərtib edin. (custom yaz).
+
 // let arr=[23,1,5,3,12,4,9,81,7,11,22,31,6]
 // let cutMax = 0
 // let tekMin = arr[0]
@@ -13,15 +14,14 @@
 // }
 // let maxResultIndex = arr.indexOf(cutMax)
 // let minResultIndex = arr.indexOf(tekMin)
-
+// let newSplice = arr.splice(maxResultIndex,1,minResultIndex)
 
 // console.log(cutMax,maxResultIndex);
 // console.log(tekMin,minResultIndex);
 
 
-let arr = [23, 1, 5, 3, 12, 4, 9, 81, 7, 11, 22, 31, 6];
-let cutMax = 0; 
-let tekMin = arr[0];   
+
+
 let cutMaxIndex = -1;    
 let tekMinIndex = -1;     
 
