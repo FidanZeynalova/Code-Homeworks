@@ -11,7 +11,7 @@ container.style.margin = "0px auto"
 let largeBox = document.createElement("div")
 largeBox.className = "largeBox"
 largeBox.textContent = "960 x 360"
-largeBox.style.width = "960px"
+largeBox.style.width = "100%"
 largeBox.style.height = "360px"
 largeBox.style.backgroundColor = "#333333"
 largeBox.style.color = "white"
@@ -25,16 +25,17 @@ container.appendChild(largeBox)
 
 let smallBoxes = document.createElement("div")
 smallBoxes.className = "smallBoxes"
+smallBoxes.style.width = "100%"
 smallBoxes.style.display = "flex"
 smallBoxes.style.margin = "2%"
-smallBoxes.style.gap = "20px"
+smallBoxes.style.gap = "30px"
 
 
 for(let i = 0; i < 3; i ++){
 let smallBox = document.createElement("div")
 smallBox.className = "smallBox"
 smallBox.textContent = "290 x 180"
-smallBox.style.width = "290px"
+smallBox.style.width = "100%"
 smallBox.style.height = "180px"
 smallBox.style.backgroundColor = "#333333"
 smallBox.style.color = "white"
@@ -42,14 +43,13 @@ smallBox.style.fontSize = "20px"
 smallBox.style.display = "flex"
 smallBox.style.justifyContent = "center"
 smallBox.style.alignItems = "center"
-smallBox.style.margin = "0px auto"
 smallBoxes.appendChild(smallBox)
 }
 
 let textBoxes = document.createElement("div")
 textBoxes.className = "textBoxes"
 textBoxes.style.display = "flex"
-textBoxes.style.textAlign = "center"
+textBoxes.style.gap = "30px"
 
 
 for(let i = 0; i < 3; i ++){
@@ -61,22 +61,27 @@ textBox.style.flexDirection = "column"
 
 let h3 = document.createElement("h3")
 h3.textContent = "Lorem, ipsum dolor"
+h3.style.fontStyle = "italic"
+h3.style.margin = " 0px"
 
 let p = document.createElement("p")
-p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quia."
+p.textContent = "Lorem ipsum dolor sit amet consectetur  ore adipisicing elit. Laboriosam, quia."
+p.style.margin = "10px 0px"
 
 
-let span = document.createElement("span")
-span.textContent = "Read More ~"
-span.style.color = "red"
-textBox.appendChild(h3,p,span)
-textBox.appendChild(p)
-textBox.appendChild(span)
+let a = document.createElement("a")
+a.setAttribute("href","#")
+a.textContent = "Read More ~"
+a.style.color = "red"
+a.style.textDecoration = "none"
+a.style.textAlign = "right"
+
+
+textBox.append(h3,p,a)
 textBoxes.appendChild(textBox)
 }
 
 
-container.appendChild(smallBoxes)
-container.appendChild(textBoxes)
+container.append(smallBoxes,textBoxes)
 
 document.body.appendChild(container)
