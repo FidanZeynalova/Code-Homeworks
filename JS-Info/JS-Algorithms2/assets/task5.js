@@ -37,10 +37,3 @@ this.splice(minResultIndex,1,cutMax)
     console.log(this);
   };
 arr.myFunc()
-  
-
-
-
-
-
-
