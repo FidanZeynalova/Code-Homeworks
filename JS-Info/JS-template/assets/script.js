@@ -54,12 +54,8 @@ function showImage(index) {
   document.querySelector(".image").src = sectionHero[index].image;
   if (index % 2 == 0) {
     textWrapper.style.color = "#000";
-    // point1.style.color = "#BC5148";
-    // point2.style.color = "#fff";
   } else {
     textWrapper.style.color = "#fff";
-    // point1.style.color = "#fff";
-    // point2.style.color = "#BC5148";
   }
 }
 
@@ -97,19 +93,19 @@ accordians.forEach((acco) => {
 
 // Children Sectionu
 
-let childrens = [
+const childrens = [
   {
     id: 1,
     image: "./assets/images/children_1.jpg.webp",
     childrenName: "Edward",
-    childrenAge: "14 ",
+    childrenAge: 14,
     gender: "Male"
   },
   {
     id: 2,
     image: "./assets/images/children_2.jpg.webp",
     childrenName: "Mellisa",
-    childrenAge: "6",
+    childrenAge: 6,
     gender: "Female"
   },
 
@@ -117,11 +113,36 @@ let childrens = [
     id: 3,
     image: "./assets/images/children_3.jpg.webp",
     childrenName: "Mark",
-    childrenAge: "12",
+    childrenAge: 12,
     gender: "Male"
   },
 
 ]
+
+let sortButton = document.querySelector("#sort")
+let searchInput = document.querySelector("#search")
+
+let sortButtonCount = 0
+sortButton.addEventListener("click", (e)=>{
+  e.preventDefault()
+  sortButtonCount ++
+  if (sortButtonCount % 2 == 1) {
+    let newChildrens = childrens.toSorted((a,b)=> b.childrenAge - a.childrenAge)
+   Children(newChildrens)
+   
+  } else {
+    Children(childrens);
+    
+  }
+})
+
+
+searchInput.addEventListener("input",() =>{
+  let letter = childrens.filter(value => value.childrenName.toLowerCase().includes(`${searchInput.value}`.toLocaleLowerCase()))
+  
+  Children(letter)
+})
+
 
 
 let childrenWrapper = document.querySelector(".children-wrapper")
@@ -135,10 +156,10 @@ let submitButton = document.querySelector("#submit")
 
 
 
-document.addEventListener("DOMContentLoaded", Children)
+document.addEventListener("DOMContentLoaded", Children(childrens))
 
 
-function Children() {
+function Children(childrens) {
   childrenWrapper.innerHTML = ""
   childrens.forEach(value => {
     childrenWrapper.innerHTML += `<div class="children-card">
@@ -154,7 +175,7 @@ function Children() {
 
 
     childrenCard = document.querySelector(".children-card"),
-      deleteButtons = document.querySelectorAll(".delete")
+     deleteButtons = document.querySelectorAll(".delete")
     deleteButtons.forEach(button => {
       button.addEventListener("click", () => {
         let id = button.getAttribute("data-id")
@@ -174,7 +195,7 @@ function Children() {
             let findedChildren = childrens.find(childrens => childrens.id == id)
             let index = childrens.indexOf(findedChildren)
             childrens.splice(index, 1)
-            Children()
+            Children(childrens)
             Swal.fire({
               title: "Deleted!",
               text: "Your file has been deleted.",
@@ -263,6 +284,8 @@ function Clear() {
   name.value = ""
   age.value = ""
 }
+
+
 
 
 // Featured sectionu
