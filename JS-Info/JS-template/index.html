@@ -35,22 +35,24 @@
 
     <main>
         <section id="navbar">
-            <div class="navbar-lists">
-                <div class="logo">
-                    <h3>Adopted</h3>
-                </div>
-                <div class="lists">
-                    <ul>
-                        <li id="first-li"><a href="">Home</a></li>
-                        <select>
-                            <option>Adoption</option>
-                            <option>Waiting Children</option>
-                            <option>How to Adopt</option>
-                        </select>
-                        <li><a href="">Succes stories</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
+            <div class="container">
+                <div class="navbar-lists">
+                    <div class="logo">
+                        <h3>Adopted</h3>
+                    </div>
+                    <div class="lists">
+                        <ul>
+                            <li id="first-li"><a href="">Home</a></li>
+                            <select>
+                                <option>Adoption</option>
+                                <option>Waiting Children</option>
+                                <option>How to Adopt</option>
+                            </select>
+                            <li><a href="">Succes stories</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -223,6 +225,11 @@
                         <button id="submit">Submit </button>
                     </form>
                 </div>
+
+                <div class="search">
+                        <input type="text" id="search" placeholder="Search">
+                        <button>Go</button>
+                </div>
                 <div class="children-wrapper">
                     <!-- <div class="children-card">
                             <img src="./assets/images/children_1.jpg.webp" alt="" class="image">
@@ -233,9 +240,9 @@
                                     <button class="delete">Delete</button>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="children-card">
+                        <!-- <div class="children-card">
                             <img src="./assets/images/children_2.jpg.webp" alt="" class="image">
                             <div class="children-content">
                                 <p>Melissa, <span> 6 yrs. old</span></p>
@@ -255,11 +262,27 @@
                                     <button class="delete">Delete</button>
                                 </div>
                             </div>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
                 </div>
             </div>
+
+            <div class="modal">
+                <!-- <div class="image">
+                    <img src="./assets/images/children_1.jpg.webp" alt="">
+                </div>
+             <div class="content">
+                <div class="card-title">Children Name: Mark</div>
+                <div class="card-text">Children Age :12 yrs. old</div>
+                <div class="card-gender">Children Gender:Male</div>
+             </div>
+             <button class="icon">
+                ❌
+             </button> -->
+            </div> 
         </section>
+
+        <!-- Children Bitti -->
 
         <section id="Featured">
             <div class="container">
@@ -357,6 +380,10 @@
             <span>Copyright ©2024 All rights reserved | This template is made with by <a href="#"> Colorlib</a> </span>
         </div>
     </footer>
+
+    <div class="overlay">
+
+    </div>
 </body>
 
 </html>

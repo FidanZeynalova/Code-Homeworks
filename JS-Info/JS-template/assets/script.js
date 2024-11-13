@@ -1,6 +1,23 @@
+// Header hissesi
 
+window.addEventListener("scroll", () => {
+  let scrollPosition = window.scrollY
+  let header = document.querySelector(".container")
+  if (scrollPosition > 54) {
+    header.style.position = "fixed"
+    header.style.top = "0"
+    header.style.backgroundColor = "rgba(188,81,72,0.6)"
+    header.style.color = "white"
+  } else {
+    header.style.backgroundColor = "#f2f2f2"
+    header.style.color = "black"
+    header.style.position = "static"
 
+  }
 
+})
+
+// Slayder hissesi
 
 const sectionHero = [
   {
@@ -103,20 +120,7 @@ let childrens = [
     childrenAge: "12",
     gender: "Male"
   },
-  // {
-  //   id: 4,
-  //   image: "./assets/images/children_4.jpg.webp",
-  //   childrenName: "Jessa",
-  //   childrenAge: "13",
-  //   gender: "Female"
-  // },
-  // {
-  //   id: 5,
-  //   image: "./assets/images/children_5.jpg.webp",
-  //   childrenName: "Ben",
-  //   childrenAge: "14",
-  //   gender: "Female"
-  // }
+
 ]
 
 
@@ -142,26 +146,79 @@ function Children() {
                             <div class="children-content">
                                 <p>${value.childrenName}, <span> ${value.childrenAge} yrs. old</span></p>
                                 <div class="buttons">
-                                    <button class="detail">Detail</button>
-                                    <button class="delete" data-id = ${childrens.id}>Delete</button>
+                                    <button class="detail" data-id = ${value.id}>Detail</button>
+                                    <button class="delete" data-id = ${value.id}>Delete</button>
                                 </div>
                             </div>
                         </div>`
 
 
-       childrenCard = document.querySelector(".children-card"),
-       deleteButtons = document.querySelectorAll(".delete")
+    childrenCard = document.querySelector(".children-card"),
+      deleteButtons = document.querySelectorAll(".delete")
     deleteButtons.forEach(button => {
       button.addEventListener("click", () => {
         let id = button.getAttribute("data-id")
-        let findedChildren = childrens.find(childrens => childrens.id== id)
-        console.log(findedChildren);
-        
-        // childrenCard.remove()
+
+
+        // Sweet Alert
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            let findedChildren = childrens.find(childrens => childrens.id == id)
+            let index = childrens.indexOf(findedChildren)
+            childrens.splice(index, 1)
+            Children()
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success"
+            });
+          }
+        });
       })
     })
 
-    // let detailButton = document.querySelectorAll(".detail")
+
+
+    let detailButtons = document.querySelectorAll(".detail")
+    detailButtons.forEach(button => {
+      button.addEventListener("click", (e) => {
+        let modal = document.querySelector(".modal")
+        let overlay = document.querySelector(".overlay")
+
+        modal.style.display = "flex",
+          overlay.style.display = "block"
+        let id = button.getAttribute("data-id")
+        let findedChildren = childrens.find(childrens => childrens.id == id)
+        e.preventDefault()
+        modal.innerHTML = `<div class="image">
+                          <img src="${findedChildren.image}" alt="">
+                      </div>
+                   <div class="content">
+                      <div class="card-title">Children Name: ${findedChildren.childrenName}</div>
+                      <div class="card-text">Children Age : ${findedChildren.childrenAge} yrs. old</div>
+                      <div class="card-gender">Children Gender:${findedChildren.gender}</div>
+                   </div>
+                   <button class="icon">
+                      ❌
+                   </button>
+                  `
+
+        let xButton = document.querySelector(".icon")
+        xButton.addEventListener("click", () => {
+          modal.style.display = "none",
+            overlay.style.display = "none"
+        })
+
+      })
+    })
 
   });
 }
@@ -173,8 +230,8 @@ addForm.addEventListener("submit", (e) => {
     let newChildren = {
       id: id,
       image: image.value,
-      name: name.value,
-      age: age.value
+      childrenName: name.value,
+      childrenAge: age.value
     }
     childrens.push(newChildren)
     Children(childrens)
@@ -183,7 +240,7 @@ addForm.addEventListener("submit", (e) => {
     // Succes sweetAlerti
     Swal.fire({
       icon: "success",
-      title: `${childrens.childrenName} succesfully added`,
+      title: `${name.value} succesfully added`,
       showConfirmButton: false,
       timer: 2000
     });
@@ -209,7 +266,6 @@ function Clear() {
 
 
 // Featured sectionu
-
 document.addEventListener("DOMContentLoaded", FeaturedCards)
 
 
@@ -234,7 +290,6 @@ function FeaturedCards() {
   featuredCardsInfo.forEach(value => {
     featuredCards.innerHTML += `<div class="feature-container">
                         <img src="${value.image}" alt="" class="image">
-
                         <div class="info">
                             <div class="plus">+</div>
                             <span>January 31, 2018</span>
