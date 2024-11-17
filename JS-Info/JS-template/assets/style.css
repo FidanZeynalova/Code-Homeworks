@@ -49,7 +49,7 @@
     background-color: #f2f2f2;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
-    z-index: 100;
+    z-index: 10;  
   }
   .navbar-lists {
     width: 70%;
@@ -105,7 +105,7 @@
 #Home {
   .slider {
     width: 100%;
-
+    
     .slide {
       width: 100%;
       position: relative;
@@ -309,7 +309,7 @@
     h4 {
       font-size: 35px;
     }
-    .form {
+    .add-form {
       width: 80%;
       margin: 30px 0;
 
@@ -329,10 +329,11 @@
         .label {
           font-size: 20px;
           margin: 5px 0;
+          white-space: nowrap;
         }
 
         input {
-          width: 80%;
+          width: 100%;
           padding: 8px;
           border-radius: 5px;
           font-size: 16px;
@@ -345,19 +346,93 @@
         }
         button {
           margin: 10px 0;
-          width: 13%;
+          width: 18%;
           padding: 10px;
           background-color: #bc5148;
           border: none;
           color: white;
           border-radius: 5px;
           font-size: 17px;
+          white-space: nowrap;
           transition: all 0.4s ease;
 
           &:hover {
             opacity: 0.8;
           }
         }
+      }
+    }
+    .edit-form {
+      background-color: rgb(244, 239, 234);
+      position: absolute;
+      width: 70%;
+      margin: 30px 0;
+      padding: 30px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      display: none;
+      z-index: 8;  
+
+      .children-form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .form-wrapper {
+          display: flex;
+          padding: 5px 0;
+          gap: 10px;
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .label {
+          font-size: 20px;
+          margin: 5px 0;
+          white-space: nowrap;
+        }
+
+        input {
+          width: 100%;
+          padding: 8px;
+          border-radius: 5px;
+          font-size: 16px;
+          outline: none;
+          border: 2px solid #bc5148;
+
+          &:focus {
+            border: 2px solid #bc5148;
+          }
+        }
+        button {
+          margin: 10px 0;
+          width: 18%;
+          padding: 10px;
+          background-color: #bc5148;
+          border: none;
+          color: white;
+          border-radius: 5px;
+          font-size: 17px;
+          white-space: nowrap;
+          transition: all 0.4s ease;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
       }
     }
     .search {
@@ -370,6 +445,7 @@
         font-size: 18px;
         border: 1px solid black;
         outline: none;
+
         &:focus {
           border: 1px solid #bc5148;
           box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -383,6 +459,7 @@
         font-size: 17px;
         border: 1px solid #bc5148;
         transition: all 0.5s ease;
+
         &:hover {
           opacity: 0.7;
         }
@@ -439,10 +516,23 @@
             .detail {
               background-color: #f4b214;
               color: white;
+              &:hover{
+                opacity: .7;
+              }
             }
             .delete {
               background-color: #bc5148;
               color: white;
+              &:hover{
+                opacity: .7;
+              }
+            }
+            .edit{
+              background-color: rgb(96, 21, 172);
+              color: #f2f2f2;
+              &:hover{
+                opacity: .7;
+              }
             }
           }
         }
@@ -469,8 +559,9 @@
     left: 50%;
     border-radius: 5px;
     transform: translate(-50%, -50%);
-    z-index: 1000;
+    z-index: 8; 
     display: none;
+
     .image {
       width: 50%;
 
@@ -753,5 +844,5 @@
   position: fixed;
   top: 0;
   display: none;
-  z-index: 100;
+  z-index: 6;
 }

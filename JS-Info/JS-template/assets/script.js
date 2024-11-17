@@ -47,6 +47,7 @@ let arrowRight = document.querySelector(".next");
 
 let count = 0;
 
+
 function showImage(index) {
   childName.innerHTML = sectionHero[index].childName;
   h1.innerHTML = sectionHero[index].childH1;
@@ -93,7 +94,7 @@ accordians.forEach((acco) => {
 
 // Children Sectionu
 
-const childrens = [
+const oldChildrens = [
   {
     id: 1,
     image: "./assets/images/children_1.jpg.webp",
@@ -118,28 +119,34 @@ const childrens = [
   },
 
 ]
+let childrens = JSON.parse(localStorage.getItem("childrens")) || oldChildrens
+
+
 
 let sortButton = document.querySelector("#sort")
 let searchInput = document.querySelector("#search")
 
+//Boyukden kiciye duzmek
+
 let sortButtonCount = 0
-sortButton.addEventListener("click", (e)=>{
+sortButton.addEventListener("click", (e) => {
   e.preventDefault()
-  sortButtonCount ++
+  sortButtonCount++
   if (sortButtonCount % 2 == 1) {
-    let newChildrens = childrens.toSorted((a,b)=> b.childrenAge - a.childrenAge)
-   Children(newChildrens)
-   
+    let newChildrens = childrens.toSorted((a, b) => b.childrenAge - a.childrenAge)
+    Children(newChildrens)
+
   } else {
     Children(childrens);
-    
+
   }
 })
 
+//search hissesi
 
-searchInput.addEventListener("input",() =>{
+searchInput.addEventListener("keyup", () => {
   let letter = childrens.filter(value => value.childrenName.toLowerCase().includes(`${searchInput.value}`.toLocaleLowerCase()))
-  
+
   Children(letter)
 })
 
@@ -169,13 +176,14 @@ function Children(childrens) {
                                 <div class="buttons">
                                     <button class="detail" data-id = ${value.id}>Detail</button>
                                     <button class="delete" data-id = ${value.id}>Delete</button>
+                                    <button class="edit" data-id = ${value.id}>Edit</button>
                                 </div>
                             </div>
                         </div>`
 
 
     childrenCard = document.querySelector(".children-card"),
-     deleteButtons = document.querySelectorAll(".delete")
+      deleteButtons = document.querySelectorAll(".delete")
     deleteButtons.forEach(button => {
       button.addEventListener("click", () => {
         let id = button.getAttribute("data-id")
@@ -183,7 +191,7 @@ function Children(childrens) {
 
         // Sweet Alert
         Swal.fire({
-          title: "Are you sure?",
+          title: "Bu card-ı silmək üçün əminsən?",
           text: "You won't be able to revert this!",
           icon: "warning",
           showCancelButton: true,
@@ -195,10 +203,11 @@ function Children(childrens) {
             let findedChildren = childrens.find(childrens => childrens.id == id)
             let index = childrens.indexOf(findedChildren)
             childrens.splice(index, 1)
+            localStorage.setItem("childrens", JSON.stringify(childrens))
             Children(childrens)
             Swal.fire({
               title: "Deleted!",
-              text: "Your file has been deleted.",
+              text: "Uğurla silindi.",
               icon: "success"
             });
           }
@@ -207,6 +216,7 @@ function Children(childrens) {
     })
 
 
+    //Detail hissesi
 
     let detailButtons = document.querySelectorAll(".detail")
     detailButtons.forEach(button => {
@@ -216,6 +226,7 @@ function Children(childrens) {
 
         modal.style.display = "flex",
           overlay.style.display = "block"
+
         let id = button.getAttribute("data-id")
         let findedChildren = childrens.find(childrens => childrens.id == id)
         e.preventDefault()
@@ -241,8 +252,73 @@ function Children(childrens) {
       })
     })
 
+    // Edit modulu
+
+    let editBtns = document.querySelectorAll(".edit")
+    let editForm = document.querySelector(".edit-form")
+    let editChildrenForm = document.querySelector(".children-form")
+    let overlay = document.querySelector(".overlay")
+    let editName = document.querySelector("#editName")
+    let editAge = document.querySelector("#editAge")
+    let editImage = document.querySelector("#editImg")
+
+
+
+    editBtns.forEach(editBtn => {
+      editBtn.addEventListener("click", () => {
+        let id = editBtn.getAttribute("data-id")
+
+        editChildrens(id)
+
+        let closeButton = document.querySelector(".icon")
+        closeButton.addEventListener("click", () => {
+          editForm.style.display = "none",
+            overlay.style.display = "none"
+        })
+
+        function editChildrens(id) {
+
+          editForm.style.display = "flex",
+            overlay.style.display = "block"
+
+          let findedChildren = childrens.find(childrens => childrens.id == id)
+          let findedChildrenIndex = childrens.indexOf(findedChildren)
+          editName.value = findedChildren.childrenName
+          editAge.value = findedChildren.childrenAge
+          editImage.value = findedChildren.image
+
+          editForm.addEventListener("submit", (e) => {
+            
+            e.preventDefault()
+        
+
+              if (editName.value.trim() !== "" && editAge.value.trim() !== "" && editImage.value.trim() !== "") {
+                let newEditChildrens =
+                {
+                  id: id,
+                  image: editImage.value,
+                  childrenName: editName.value,
+                  childrenAge: editAge.value
+
+                }
+                childrens.splice(findedChildrenIndex,1,newEditChildrens)
+                    editForm.style.display = "none",
+            overlay.style.display = "none"
+               Children(childrens)
+               localStorage.setItem("childrens",JSON.stringify(childrens))
+              
+
+              }
+
+          })
+
+        }
+
+      })
+    })
   });
 }
+
 
 addForm.addEventListener("submit", (e) => {
   if (name.value.trim() !== "" && age.value.trim() !== "" && image.value.trim() !== "") {
@@ -255,6 +331,7 @@ addForm.addEventListener("submit", (e) => {
       childrenAge: age.value
     }
     childrens.push(newChildren)
+    localStorage.setItem("childrens", JSON.stringify(childrens))
     Children(childrens)
     Clear()
 
@@ -265,6 +342,7 @@ addForm.addEventListener("submit", (e) => {
       showConfirmButton: false,
       timer: 2000
     });
+
 
 
   } else {
@@ -292,7 +370,7 @@ function Clear() {
 document.addEventListener("DOMContentLoaded", FeaturedCards)
 
 
-const featuredCardsInfo = [
+const oldFeaturedCardsInfo = [
   {
     image: "./assets/images/work_thumb_1.jpg.webp",
     parag: "Being loved has taought me how too love"
@@ -308,6 +386,8 @@ const featuredCardsInfo = [
 ]
 
 let featuredCards = document.querySelector(".featured-cards")
+let featuredCardsInfo = JSON.parse(localStorage.getItem("oldFeaturedCardsInfo")) || oldFeaturedCardsInfo
+
 
 function FeaturedCards() {
   featuredCardsInfo.forEach(value => {
