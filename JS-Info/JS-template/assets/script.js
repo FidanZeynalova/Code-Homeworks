@@ -201,11 +201,11 @@ function Children(childrens) {
     deleteButtons.forEach(button => {
       button.addEventListener("click", () => {
         let id = button.getAttribute("data-id")
-
+        
 
         // Sweet Alert
         Swal.fire({
-          title: "Bu card-ı silmək üçün əminsən?",
+          title: `card-nı silmək üçün əminsən?`,
           text: "You won't be able to revert this!",
           icon: "warning",
           showCancelButton: true,
@@ -320,7 +320,13 @@ function Children(childrens) {
             overlay.style.display = "none"
                Children(childrens)
                localStorage.setItem("childrens",JSON.stringify(childrens))
-              
+
+               Swal.fire({
+                icon: "success",
+                title: `${newEditChildrens.childrenName} uğurla save olundu.`,
+                showConfirmButton: false,
+                timer: 1500
+              });
 
               }
 
@@ -333,6 +339,7 @@ function Children(childrens) {
   });
 }
 
+//Add hissesi
 
 addForm.addEventListener("submit", (e) => {
   if (name.value.trim() !== "" && age.value.trim() !== "" && image.value.trim() !== "") {
@@ -352,7 +359,7 @@ addForm.addEventListener("submit", (e) => {
     // Succes sweetAlerti
     Swal.fire({
       icon: "success",
-      title: `${name.value} succesfully added`,
+      title: `${newChildren.childrenName} succesfully added`,
       showConfirmButton: false,
       timer: 2000
     });
