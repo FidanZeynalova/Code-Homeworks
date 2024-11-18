@@ -241,51 +241,44 @@
         padding: 0px 50px;
         margin-bottom: 20px;
       }
-      .accordian-wrapper {
-      }
-      .accordian {
-        margin-bottom: 5px;
-        cursor: pointer;
-
-        .accordian-heading {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
-          border: 1px solid rgba(0, 0, 0, 0.5);
-          padding: 15px 20px;
-
-          h3 {
-            font-size: 20px;
-
-            &:hover {
-              color: #bc5148;
+      .accordion-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        .accordion {
+            border: 1px solid rgba(0, 0, 0, 0.508);
+          .accordion-title {
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.508);
+            cursor: pointer;
+           
+            
+    
+            h1 {
+              font-size: 20px;
+            }
+            .fa-angle-down {
+              font-size: 20px;
+              transition: .5s transform;
+              cursor: pointer;
+            }
+          }
+          .content {
+            opacity: .7;
+            max-height: 0; 
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            p{
+            margin: 10px;
             }
           }
         }
       }
-      .accordian-content {
-        color: rgba(0, 0, 0, 0.5);
-        padding: 15px 20px;
-        border: 1px solid rgba(0, 0, 0, 0.5);
-        font-size: 15px;
-        border-top: 0;
-        display: none;
-      }
-    }
-    .accordian.active .accordian-heading {
-      background-color: rgb(233, 233, 233);
-      color: black;
-    }
-    .accordian.active .accordian-heading i {
-      color: black;
-      transform: rotate(180deg);
-      transition: all 0.3s ease;
-    }
-    .accordian.active .accordian-content {
-      display: block;
-      animation: animate 0.2s linear backwards;
-      transform-origin: top;
     }
   }
 }

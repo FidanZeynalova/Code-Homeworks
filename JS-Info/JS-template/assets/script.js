@@ -76,21 +76,35 @@ showImage(count);
 
 // Accordian hissesi
 
-let accordians = document.querySelectorAll(".accordian-wrapper .accordian")
-let heading = document.querySelector(".accordian-heading")
+let accordions = document.querySelectorAll(".accordion")
+let titleButton = document.querySelector(".accordion-title")
+let headings = document.querySelectorAll("#content")
+let buttons = document.querySelectorAll(".fa-angle-down")
 
-// let accordianHeading = document.querySelector(".accordian-heading")
-accordians.forEach((acco) => {
-  acco.onclick = () => {
-    accordians.forEach((subcontent) => {
-      subcontent.classList.remove("active")
-
-    })
-    acco.classList.add("active");
-  }
-
-})
-
+accordions.forEach((accordion, i) => {
+    accordion.addEventListener("click", () => {
+        let content = accordion.querySelector(".content");
+        let isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+        document.querySelectorAll(".content").forEach((info) => info.style.maxHeight = "0px");
+        headings.forEach(heading =>{
+            heading.style.color = "black"
+        })
+        console.log(headings[i]);
+        
+        buttons.forEach((button) => {
+            button.style.transform = "rotate(0deg)";
+            headings[i].style.color = "black"
+            button.style.color = "black"
+        });
+        if (!isOpen) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            buttons[i].style.transform = "rotate(180deg)";
+            headings[i].style.color = "#bc5148"
+            buttons[i].style.color = "#bc5148"
+        }
+        
+    });
+});
 
 // Children Sectionu
 
@@ -401,5 +415,3 @@ function FeaturedCards() {
                     </div>`
   });
 }
-
-
