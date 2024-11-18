@@ -82,28 +82,28 @@ let headings = document.querySelectorAll("#content")
 let buttons = document.querySelectorAll(".fa-angle-down")
 
 accordions.forEach((accordion, i) => {
-    accordion.addEventListener("click", () => {
-        let content = accordion.querySelector(".content");
-        let isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
-        document.querySelectorAll(".content").forEach((info) => info.style.maxHeight = "0px");
-        headings.forEach(heading =>{
-            heading.style.color = "black"
-        })
-        console.log(headings[i]);
-        
-        buttons.forEach((button) => {
-            button.style.transform = "rotate(0deg)";
-            headings[i].style.color = "black"
-            button.style.color = "black"
-        });
-        if (!isOpen) {
-            content.style.maxHeight = content.scrollHeight + "px";
-            buttons[i].style.transform = "rotate(180deg)";
-            headings[i].style.color = "#bc5148"
-            buttons[i].style.color = "#bc5148"
-        }
-        
+  accordion.addEventListener("click", () => {
+    let content = accordion.querySelector(".content");
+    let isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
+    document.querySelectorAll(".content").forEach((info) => info.style.maxHeight = "0px");
+    headings.forEach(heading => {
+      heading.style.color = "black"
+    })
+    console.log(headings[i]);
+
+    buttons.forEach((button) => {
+      button.style.transform = "rotate(0deg)";
+      headings[i].style.color = "black"
+      button.style.color = "black"
     });
+    if (!isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      buttons[i].style.transform = "rotate(180deg)";
+      headings[i].style.color = "#bc5148"
+      buttons[i].style.color = "#bc5148"
+    }
+
+  });
 });
 
 // Children Sectionu
@@ -201,7 +201,7 @@ function Children(childrens) {
     deleteButtons.forEach(button => {
       button.addEventListener("click", () => {
         let id = button.getAttribute("data-id")
-        
+
 
         // Sweet Alert
         Swal.fire({
@@ -237,9 +237,8 @@ function Children(childrens) {
       button.addEventListener("click", (e) => {
         let modal = document.querySelector(".modal")
         let overlay = document.querySelector(".overlay")
-
         modal.style.display = "flex",
-          overlay.style.display = "block"
+          overlay.style.display = "flex"
 
         let id = button.getAttribute("data-id")
         let findedChildren = childrens.find(childrens => childrens.id == id)
@@ -250,18 +249,19 @@ function Children(childrens) {
                    <div class="content">
                       <div class="card-title">Children Name: ${findedChildren.childrenName}</div>
                       <div class="card-text">Children Age : ${findedChildren.childrenAge} yrs. old</div>
-                      <div class="card-gender">Children Gender:${findedChildren.gender}</div>
-                   </div>
+                     
                    <button class="icon">
                       ❌
                    </button>
                   `
-
-        let xButton = document.querySelector(".icon")
-        xButton.addEventListener("click", () => {
-          modal.style.display = "none",
-            overlay.style.display = "none"
+        let xButtons = document.querySelectorAll(".icon")
+        xButtons.forEach(xButton =>{
+          xButton.addEventListener("click", () => {
+            modal.style.display = "none",
+              overlay.style.display = "none"
         })
+        })
+
 
       })
     })
@@ -302,33 +302,33 @@ function Children(childrens) {
           editImage.value = findedChildren.image
 
           editForm.addEventListener("submit", (e) => {
-            
+
             e.preventDefault()
-        
 
-              if (editName.value.trim() !== "" && editAge.value.trim() !== "" && editImage.value.trim() !== "") {
-                let newEditChildrens =
-                {
-                  id: id,
-                  image: editImage.value,
-                  childrenName: editName.value,
-                  childrenAge: editAge.value
 
-                }
-                childrens.splice(findedChildrenIndex,1,newEditChildrens)
-                    editForm.style.display = "none",
-            overlay.style.display = "none"
-               Children(childrens)
-               localStorage.setItem("childrens",JSON.stringify(childrens))
+            if (editName.value.trim() !== "" && editAge.value.trim() !== "" && editImage.value.trim() !== "") {
+              let newEditChildrens =
+              {
+                id: id,
+                image: editImage.value,
+                childrenName: editName.value,
+                childrenAge: editAge.value
 
-               Swal.fire({
+              }
+              childrens.splice(findedChildrenIndex, 1, newEditChildrens)
+              editForm.style.display = "none",
+                overlay.style.display = "none"
+              Children(childrens)
+              localStorage.setItem("childrens", JSON.stringify(childrens))
+
+              Swal.fire({
                 icon: "success",
                 title: `${newEditChildrens.childrenName} uğurla save olundu.`,
                 showConfirmButton: false,
                 timer: 1500
               });
 
-              }
+            }
 
           })
 
