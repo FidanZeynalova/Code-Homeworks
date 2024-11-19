@@ -52,11 +52,10 @@ GetAllData(BaseURL)
           e.preventDefault()
           sortButtonCount++
           if (sortButtonCount % 2 == 1) {
-            let newDatas = data.toSorted((a, b) => b.childrenAge - a.childrenAge)
-            Children(newChildrens)
+            let newDatas = data.toSorted((a, b) => A Z)
+          
         
           } else {
-            Children(childrens);
         
           }
         })
