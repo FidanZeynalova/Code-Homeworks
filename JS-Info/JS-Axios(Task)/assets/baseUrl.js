@@ -1,0 +1,1 @@
+export let BaseURL="https://northwind.vercel.app/api/suppliers"
