@@ -47,18 +47,7 @@ GetAllData(BaseURL)
 
         });
 
-        let sortButtonCount = 0
-        toAfromZ.addEventListener("click", (e) => {
-          e.preventDefault()
-          sortButtonCount++
-          if (sortButtonCount % 2 == 1) {
-            let newDatas = data.toSorted((a, b) => A Z)
-          
-        
-          } else {
-        
-          }
-        })
+       
 
 
 
