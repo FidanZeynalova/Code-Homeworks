@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/main.css">
+    <script defer src="./Assets/main.js" type="module"></script>
+    <!-- axios cdn linki -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+        integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- Icon linki -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Axios Task</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>Axios Task</p>
+        <form class="add-form">
+            <input type="text" class="form-control" id="name" placeholder="name">
+            <input type="text" class="form-control" id="description" placeholder="description">
+            <button type="submit" class="add">Add</button>
+        </form>
+        <div class="find">
+            <div class="search">
+                <label for="search" >Search🔎</label>
+                <input type="text" id="search" placeholder="Search🔎">
+            </div>
+            <div class="buttons">
+                <button id="az">A-Z</button>
+                <button id="za">Z-A</button>
+            </div>
+        </div>
+        <div class="cards-wrapper">
+            <!-- <div class="card">
+                <span>id:</span><br>
+                <span>Company Name:</span><br>
+                <span>Contact Name:</span><br>
+                <span>Contact Title:</span><br>
+            
+            <div class="btns">
+                <button id="details">Details</button>
+                <button id="edit">Edit</button>
+                <button id="delete">Delete</button>
+            </div>
+        </div> -->
+        <!-- <div class="card">
+            <span>id:</span><br>
+            <span>Company Name:</span><br>
+            <span>Contact Name</span><br>
+            <span>Contact Title</span><br>
+        
+        <div class="btns">
+            <button id="details">Details</button>
+            <button id="edit">Edit</button>
+            <button id="delete">Delete</button>
+        </div>
+    </div> -->
+    <!-- <div class="card">
+        <span>id:</span><br>
+        <span>Company Name:</span><br>
+        <span>Contact Name</span><br>
+        <span>Contact Title</span><br>
+    
+    <div class="btns">
+        <button id="details">Details</button>
+        <button id="edit">Edit</button>
+        <button id="delete">Delete</button>
+    </div>
+</div> -->
+        </div>
+
+
+
+        <div class="edit-wrapper">
+            <form class="edit-form">
+                <p>Edit Form</p>
+                <input type="text" class="form-control" id="editName" placeholder="Name">
+                <input type="text" class="form-control" id="editDescription" placeholder="Description">
+                <button type="submit" class="edit">Add</button>
+            </form>
+            <i class="fa-solid fa-x"></i>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+</body>
+
+</html>

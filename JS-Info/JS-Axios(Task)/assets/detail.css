@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: antiquewhite;
+}
+.container{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    .card{
+        width: 100%;
+        border: 1px solid #E67E22;
+        color: white;
+        background-color: #a04910;
+        padding: 30px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 23px;
+        transition: all .4s ease;
+        &:hover{
+            box-shadow: 10px 5px 26px black;
+        }
+    }
+}
+#details{
+    background-color: coral;
+    border: 1px solid coral;
+    padding: 10px;
+    margin: 15px auto;
+    border-radius: 5px;
+    cursor: pointer;    
+    color: white;
+    transition: all .4s ease;
+    a{
+        font-size: 18px;
+    color: black;
+    }
+    &:hover{
+        border: 1px solid coral;
+        color: coral;
+        background-color: white;
+    }
+}
