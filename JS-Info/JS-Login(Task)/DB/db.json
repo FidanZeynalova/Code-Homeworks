@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "9c2f",
+      "name": "Erich Stewart",
+      "surname": "Austin",
+      "email": "gupat@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "77ba",
+      "name": "Ezekiel Buckner",
+      "surname": "Vang",
+      "email": "quto@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": [
+        "fb89",
+        "b478"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "b478",
+      "image": "https://themewagon.github.io/cozastore/images/product-05.jpg",
+      "name": "Front Pocket Jumper",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur?",
+      "price": "34.75"
+    },
+    {
+      "id": "fb89",
+      "image": "https://themewagon.github.io/cozastore/images/product-04.jpg",
+      "name": "Classic Trench Coat",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur?",
+      "price": "75.00"
+    },
+    {
+      "id": "df21",
+      "image": "https://themewagon.github.io/cozastore/images/product-07.jpg",
+      "name": "Shirt in Stretch Cotton",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur?",
+      "price": "52.66"
+    },
+    {
+      "id": "8ef0",
+      "image": "https://themewagon.github.io/cozastore/images/product-10.jpg",
+      "name": "Femme T-Shirt In Stripe",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur?",
+      "price": "25.85"
+    },
+    {
+      "id": "553d",
+      "image": "https://themewagon.github.io/cozastore/images/product-08.jpg",
+      "name": "Pieces Metallic Printed",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur?",
+      "price": "18.96"
+    },
+    {
+      "id": "5e30",
+      "image": "https://themewagon.github.io/cozastore/images/product-01.jpg",
+      "name": "Esprit Ruffle Shirt",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, consequatur?",
+      "price": "16.64"
+    }
+  ]
+}

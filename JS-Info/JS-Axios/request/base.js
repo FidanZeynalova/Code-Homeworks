@@ -1,0 +1,1 @@
+export let BaseUrl = "https://northwind.vercel.app/api/categories"

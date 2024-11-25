@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories Table</title>
+  <link rel="stylesheet" href="./assets/main.css">
+  <script defer src="./assets/main.js" type="module"></script>
+  <!-- Axios Linki -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Icon linki -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>CATEGORIES</h1>
+
+    <form class="add-form">
+        <input type="text" class="form-control" id="name" placeholder="name">
+        <input type="text" class="form-control" id="description" placeholder="description">
+        <button type="submit" class="add">Add</button>
+    </form>
+    <table class="categories-table">
+  
+        <!-- <tr>
+          <td>Confections</td>
+          <td>
+            <button class="edit">Edit</button>
+            <button class="details">Details</button>
+            <button class="delete">Delete</button>
+          </td>
+        </tr> -->
+
+    </table>
+
+
+    
+    <form class="edit-form">
+      <input type="text" class="form-control" id="editName" placeholder="name">
+      <input type="text" class="form-control" id="editDescription" placeholder="description">
+      <i class="fa-solid fa-x"></i>
+      <button type="submit" class="edit">Add</button>
+  </form>
+  </div>
+  <div class="overlay"></div>
+</body>
+</html>

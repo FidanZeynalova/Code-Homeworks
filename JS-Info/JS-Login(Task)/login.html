@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/login.css">
+    <script defer src="./assets/login.js" type="module"></script>
+    <!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Axios linki -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form">
+            <h1><span>L</span>ogin Form</h1>
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" placeholder="email" id="email">
+            </div>
+            <div class="input">
+                <label for="password">Password</label>
+                <input type="password" placeholder="password" id="password">
+            </div>
+            <button class="login">Submit</button>
+            <span> don't have an account? <a href="./register.html">Sign Up</a></span>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
-import { BaseUrl } from "./baseUrl.js";
-import { CategoriesById } from "./categories.js";
+import { BaseUrl } from "./baseUrl.js"
+import { CategoriesById } from "./categories.js"
 
 let id = new URLSearchParams(window.location.search).get("id")
 

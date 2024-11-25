@@ -40,7 +40,7 @@ function GetCategory(){
                 return findName.startsWith(inputText);
             });
             ShowCategories(findText);
-            });
+});
 
         // Z-dən A-ya
         let sortAZCount = 0;
@@ -65,7 +65,7 @@ function GetCategory(){
                  ShowCategories(newDataAZ);
  
              } else {
-                 ShowCategories(data);
+                 ShowCategories();
              }
          });
 
