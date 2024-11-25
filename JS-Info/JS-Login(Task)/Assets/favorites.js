@@ -13,12 +13,16 @@ function GetFavorites() {
     .then(res =>{
         // Userin Fav arrayi(id-lerle)
         let myFavs = res.data.favorites
-        GetAllDatas(`${BaseUrl}/products`)
+        GetAllDatas(`${BaseUrl}/users`)
         .then(res =>{
             // Mehsullarin butun datalari olan arraydir
             let products = res.datas
+            
             let myFavoriteProducts = products.filter(product=>myFavs.includes(product.id))
-            cardWrapper.innerHTML = ``
+            console.log(myFavs);
+            
+            
+            
           if (myFavoriteProducts.length > 0) {
             myFavoriteProducts.forEach(myFavoriteProduct => {
                 cardWrapper.innerHTML += `
@@ -35,17 +39,17 @@ function GetFavorites() {
                 </div>
             </div>`
 
-            let noFavs = document.querySelectorAll(".nofav")
-                noFavs.forEach(noFav =>{
-                    noFav.addEventListener("click",()=>{
-                        let noFavId = noFav.getAttribute("data-id")
-                         let findedNoFav = myFavs.find(myfav => myfav == noFavId)
-                         let noFavIndex = myFavs.indexOf(findedNoFav)
-                         myFavs.splice(noFavIndex,1)
-                         UpdateData(`${BaseUrl}/users`,userId,res.datas)
-                         .then(() => GetFavorites())
-                    })
-                })
+            // let noFavs = document.querySelectorAll(".nofav")
+            //     noFavs.forEach(noFav =>{
+            //         noFav.addEventListener("click",()=>{
+            //             let noFavId = noFav.getAttribute("data-id")
+            //              let findedNoFav = myFavs.find(myfav => myfav == noFavId)
+            //              let noFavIndex = myFavs.indexOf(findedNoFav)
+            //              myFavs.splice(noFavIndex,1)
+            //              UpdateData(`${BaseUrl}/users`,userId,res.datas)
+            //              .then(() => GetFavorites())
+            //         })
+            //     })
             });
           } 
           else {

@@ -79,14 +79,14 @@ function ShowProducts(products) {
                 })
             })
 
-            let baskets = document.querySelectorAll(".fa-cart-shopping")
-            baskets.forEach(basket =>{
-                basket.addEventListener("click",()=>{
-                    let productId = basket.getAttribute("data-id")
-                    console.log(userId.productId);
+            // let baskets = document.querySelectorAll(".fa-cart-shopping")
+            // baskets.forEach(basket =>{
+            //     basket.addEventListener("click",()=>{
+            //         let productId = basket.getAttribute("data-id")
+            //         console.log(userId.pr);
                     
-                })
-            })
+            //     })
+            // })
     });
 }
 
