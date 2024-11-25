@@ -5,7 +5,7 @@ container.style.display = "flex"
 container.style.flexDirection = "column"
 container.style.justifyContent = "center"
 container.style.alignItems = "center"
-container.style.margin = "0px auto"
+container.style.margin = "120px auto"
 
 
 let largeBox = document.createElement("div")
