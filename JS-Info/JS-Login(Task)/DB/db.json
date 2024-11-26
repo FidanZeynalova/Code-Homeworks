@@ -1,18 +1,13 @@
 {
   "users": [
     {
-      "id": "9c2f",
-      "name": "Erich Stewart",
-      "surname": "Austin",
-      "email": "gupat@mailinator.com",
+      "id": "560d",
+      "name": "Catherine Barry",
+      "surname": "Griffin",
+      "email": "luto@mailinator.com",
       "password": "Pa$$w0rd!",
       "isAdmin": false,
-      "favorites": [
-        "fb89",
-        "b478",
-        "8ef0",
-        "553d"
-      ]
+      "favorites": []
     }
   ],
   "products": [
