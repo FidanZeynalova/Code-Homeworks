@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+      background-color: rgb(237, 176, 176);
+  }
+  h1{
+    margin: 80px auto;
+    display: flex;
+    color: brown;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+
+  }
+  .container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    gap: 30px;
+    .card{
+        background-color: brown;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 15px;
+            transition: all 0.4s ease;
+            .image {
+              width: 350px;
+              padding: 10px;
+              border-radius: 20px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                border: 7px solid rgb(237, 176, 176);
+                aspect-ratio: 1.6;
+                border-radius: 10px;
+              }
+            }
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+                rgba(0, 0, 0, 0.22) 0px 10px 10px;
+              transform: translateY(-10px);
+            }
+            .content{
+                display: flex;
+                padding: 100px ;
+                flex-direction: column;
+                margin-left: 12%;
+                gap: 15px;
+                color: rgb(237, 176, 176);
+                font-size: 25px;
+
+                
+            }
+          }
+    }
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .fa-heart {
+          cursor: pointer;
+          border: 1px solid rgb(237, 176, 176);
+          padding: 7px;
+          border-radius: 6px;
+          font-size: 19px;
+          transition: all .4s ease;
+          &:hover{
+              background-color: rgb(237, 176, 176);
+              color: brown; 
+              border: 1px solid rgb(237, 176, 176)brown;
+          }
+        }
+        .fa-cart-shopping {
+          cursor: pointer;
+          border: 1px solid rgb(237, 176, 176);
+          padding: 7px;
+          border-radius: 6px;
+          font-size: 19px;
+          transition: all .4s ease;
+          &:hover{
+              background-color: rgb(237, 176, 176);
+              color: brown; 
+              border: 1px solid rgb(237, 176, 176);
+          }
+        }
+      }

@@ -10,14 +10,15 @@ nav {
   padding: 20px;
   background-color: rgb(237, 176, 176);
   .main-content {
-    width: 80%;
-    margin: 0px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+      width: 80%;
+      margin: 0px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     .icons {
       display: flex;
       gap: 10px;
+      justify-content: space-between;
       align-items: center;
     }
     span {

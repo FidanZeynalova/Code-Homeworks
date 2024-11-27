@@ -13,10 +13,13 @@ async function ShowBasketProducts(){
         let basketProduct = products.datas.find(value => value.id == product.id)
         cardWrapper.innerHTML += `
         <div class="card">
-                    <div class="image"> <img src="${basketProduct.image}" alt=""></div>
+                    <div class="image"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZkT9O_Sa_8B9L4gz3Xrj2MZ0hMgrzJstJvA&s" alt=""></div>
                     <div class="content">
-                        <p>${basketProduct.name}</p>
-                        <p>${basketProduct.price}$</p>
+                        <p>${basketProduct.brand}</p>
+                        <p>${basketProduct.model}</p>
+                           <p>${basketProduct.operatingSystem}</p>
+                    <p>Year: ${basketProduct.year}</p>
+                    <p>${basketProduct.price}$</p>
                       <div class="icons">
                         <i class="fa-solid fa-plus" data-id = ${basketProduct.id}></i>
                         <p>${product.count}</p>
