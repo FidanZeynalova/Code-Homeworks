@@ -7,12 +7,29 @@
       "email": "gupat@mailinator.com",
       "password": "Pa$$w0rd!",
       "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "a6db",
+      "name": "fidan",
+      "surname": "zeynalova",
+      "email": "fidanzeynalova@gmail.com",
+      "password": "123",
+      "isAdmin": false,
       "favorites": [
         "fb89",
-        "b478",
-        "8ef0",
-        "553d"
+        "553d",
+        "df21"
       ]
+    },
+    {
+      "id": "7d74",
+      "name": "fidan",
+      "surname": "fidan",
+      "email": "fidan@gmail.com",
+      "password": "123",
+      "isAdmin": false,
+      "favorites": []
     }
   ],
   "products": [

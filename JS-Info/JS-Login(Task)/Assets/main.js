@@ -7,7 +7,8 @@ import BaseUrl from "./requests/baseUrl.js"
 let auth = document.querySelector(".auth")
 let cardWrapper = document.querySelector(".card-wrapper")
 let favPage = document.querySelector(".fav")
-let BasketPage = document.querySelector(".basket")
+let basketPage = document.querySelector(".basket")
+let basket = JSON.parse(localStorage.getItem("basket")) || []
 
 
 function GetLocalId(){
@@ -79,14 +80,14 @@ function ShowProducts(products) {
                 })
             })
 
-            // let baskets = document.querySelectorAll(".fa-cart-shopping")
-            // baskets.forEach(basket =>{
-            //     basket.addEventListener("click",()=>{
-            //         let productId = basket.getAttribute("data-id")
-            //         console.log(userId.pr);
+            let baskets = document.querySelectorAll(".fa-cart-shopping")
+            baskets.forEach(basket =>{
+                basket.addEventListener("click",()=>{
+                    let productId = basket.getAttribute("data-id")
+                    AddBasket(productId)
                     
-            //     })
-            // })
+                })
+            })
     });
 }
 
@@ -110,11 +111,22 @@ function AddFavorites(userId,productId) {
 }
 
 
-
-
-
 favPage.addEventListener("click",()=>{
     window.location.href = "favorites.html"
 })
+basketPage.addEventListener("click",()=>{
+    window.location.href = "basket.html"
+})
 
 GetProducts()
+
+function AddBasket(productId){
+    let findedBasketProduct = basket.find(product => product.id == productId)
+    if(findedBasketProduct){
+        findedBasketProduct.count ++    
+    }else{
+        findedBasketProduct = {id:productId,count:1}
+        basket.push(findedBasketProduct)
+        localStorage.setItem("basket",JSON.stringify(basket))
+    }
+}

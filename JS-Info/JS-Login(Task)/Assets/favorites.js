@@ -12,14 +12,16 @@ function GetFavorites() {
     GetDataById(`${BaseUrl}/users`,userId)
     .then(res =>{
         // Userin Fav arrayi(id-lerle)
+        let user=res.data
         let myFavs = res.data.favorites
-        GetAllDatas(`${BaseUrl}/users`)
+        GetAllDatas(`${BaseUrl}/products`)
         .then(res =>{
             // Mehsullarin butun datalari olan arraydir
             let products = res.datas
+            console.log(products);
             
             let myFavoriteProducts = products.filter(product=>myFavs.includes(product.id))
-            console.log(myFavs);
+            console.log(myFavoriteProducts);
             
             
             
@@ -39,17 +41,17 @@ function GetFavorites() {
                 </div>
             </div>`
 
-            // let noFavs = document.querySelectorAll(".nofav")
-            //     noFavs.forEach(noFav =>{
-            //         noFav.addEventListener("click",()=>{
-            //             let noFavId = noFav.getAttribute("data-id")
-            //              let findedNoFav = myFavs.find(myfav => myfav == noFavId)
-            //              let noFavIndex = myFavs.indexOf(findedNoFav)
-            //              myFavs.splice(noFavIndex,1)
-            //              UpdateData(`${BaseUrl}/users`,userId,res.datas)
-            //              .then(() => GetFavorites())
-            //         })
-            //     })
+            let noFavs = document.querySelectorAll(".nofav")
+                noFavs.forEach(noFav =>{
+                    noFav.addEventListener("click",()=>{
+                        let noFavId = noFav.getAttribute("data-id")
+                         let findedNoFav = myFavs.find(myfav => myfav == noFavId)
+                         let noFavIndex = myFavs.indexOf(findedNoFav)
+                         myFavs.splice(noFavIndex,1)
+                         UpdateData(`${BaseUrl}/users`,userId,user)
+                         
+                    })
+                })
             });
           } 
           else {
