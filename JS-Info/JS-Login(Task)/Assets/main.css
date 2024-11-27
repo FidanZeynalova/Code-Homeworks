@@ -64,6 +64,12 @@ main {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr); 
+    }
     .card {
       border-radius: 10px;
       font-size: 18px;
@@ -128,3 +134,36 @@ main {
     flex-direction: column;
     gap: 5px;
 }
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  margin-bottom: 5%;
+  gap: 15px;
+  .search{
+   input{
+    width: 350px;
+    border-radius: 10px;
+    border: 2px solid rgb(237, 176, 176);
+    padding: 10px;
+    font-size: 20px;
+   }
+  }
+  .sort{
+    select{
+    width: 350px;
+      border-radius: 10px;
+      border: 2px solid rgb(237, 176, 176);
+      padding: 10px;
+      font-size: 20px;
+      color: brown;
+      }
+    }
+  }
+
+
+
+     

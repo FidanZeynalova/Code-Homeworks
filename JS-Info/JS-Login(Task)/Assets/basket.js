@@ -2,15 +2,16 @@ import BaseUrl from "./requests/baseUrl.js";
 import { GetAllDatas } from "./requests/requets.js";
 
 
-let basket = JSON.parse(localStorage.getItem("basket"))
+let basket = JSON.parse(localStorage.getItem("basket")) || []
 let cardWrapper = document.querySelector(".card-wrapper")
-
+let clearBasket = document.querySelector(".clear-basket")
 
 async function ShowBasketProducts(){
     cardWrapper.innerHTML = ``
     let products = await GetAllDatas(`${BaseUrl}/products`)
     for(let product of basket){
         let basketProduct = products.datas.find(value => value.id == product.id)
+        
         cardWrapper.innerHTML += `
         <div class="card">
                     <div class="image"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZkT9O_Sa_8B9L4gz3Xrj2MZ0hMgrzJstJvA&s" alt=""></div>
@@ -82,3 +83,13 @@ function DeleteBasket(id){
     localStorage.setItem("basket",JSON.stringify(basket))
     ShowBasketProducts()
 }
+  
+ function ClearBasket(){
+    clearBasket.addEventListener("click",()=>{
+        localStorage.removeItem("basket")
+        basket = []
+        ShowBasketProducts(basket)
+        
+    })
+ }
+ ClearBasket()

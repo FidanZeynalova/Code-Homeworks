@@ -15,7 +15,6 @@ function GetFavorites() {
       let user = res.data
       let myFavs = res.data.favorites
 
-      console.log(myFavs);
       GetAllDatas(`${BaseUrl}/products`)
         .then(res => {
           // Mehsullarin butun datalari olan arraydir
@@ -25,10 +24,8 @@ function GetFavorites() {
           let myFavoriteProducts = [];
 
           myFavs.forEach(myFav => {
-            myFavoriteProducts.push(products.find((product) => Number(myFav) === product.id))
+            myFavoriteProducts.push(products.find((product) => myFav == product.id))
           })
-
-
           console.log(myFavoriteProducts)
           if (myFavoriteProducts.length > 0) {
             myFavoriteProducts.forEach(myFavoriteProduct => {

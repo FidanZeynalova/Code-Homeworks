@@ -5,12 +5,10 @@ import BaseUrl from "./requests/baseUrl.js"
 
 // Selectors
 let auth = document.querySelector(".auth")
-
 let cardWrapper = document.querySelector(".card-wrapper")
 let favPage = document.querySelector(".fav")
 let basketPage = document.querySelector(".basket")
 let basket = JSON.parse(localStorage.getItem("basket")) || []
-
 
 function GetLocalId() {
     let userId = JSON.parse(localStorage.getItem("UserInfo"))
@@ -25,7 +23,6 @@ function GetLocalId() {
 
 
                 let logOut = document.querySelector(".logout")
-
                 logOut.addEventListener("click", () => {
                     localStorage.removeItem("UserInfo")
                     GetLocalId()
@@ -47,8 +44,43 @@ GetLocalId()
 
 function GetProducts() {
     GetAllDatas(`${BaseUrl}/products`)
-        .then(res => ShowProducts(res.datas))
+        .then(res => {
+
+            // Search
+            let searchInput = document.querySelector("#search")
+            searchInput.addEventListener("input", (e) => {
+                let searchFilter = res.datas.filter(({ model }) => model.toLowerCase().startsWith(e.target.value.trim().toLowerCase()));
+                console.log(searchFilter);
+                ShowProducts(searchFilter)
+            })
+
+            // Sort
+            let sortSelect = document.querySelector(".form-select")
+            sortSelect.addEventListener("change", (e) => {
+                let sortSelectData;
+                switch (e.target.value) {
+                    case "firstCheap":
+                        sortSelectData = res.datas.toSorted((a, b) => a.price - b.price)
+                        break;
+                    case "firstExpensive":
+                        sortSelectData = res.datas.toSorted((a, b) => b.price - a.price)
+                        break;
+                    case "fromAtoZ":
+                        sortSelectData = res.datas.toSorted((a, b) => a.model.localeCompare(b.model))
+                        break;
+                    case "fromZtoA":
+                        sortSelectData = res.datas.toSorted((a, b) => b.model.localeCompare(a.model))
+                        break;
+                    default:
+                       sortSelectData = [...res.datas]
+                }
+                ShowProducts(sortSelectData)
+            })
+            ShowProducts(res.datas)
+        })
 }
+
+
 function ShowProducts(products) {
     cardWrapper.innerHTML = ``
     products.forEach(product => {
@@ -70,27 +102,39 @@ function ShowProducts(products) {
 
 
         let cards = document.querySelectorAll(".card")
-        cards.forEach(card =>{
+        cards.forEach(card => {
             card.addEventListener("click", () => {
                 console.log(card.dataset.id);
-                
+
                 window.location = "./detail.html?id=" + Number(card.dataset.id);
             })
             let favBtns = document.querySelectorAll(".fa-heart")
-            favBtns.forEach(favBtn=>{
-                favBtn.addEventListener("click",(e)=>{
+            favBtns.forEach(favBtn => {
+                favBtn.addEventListener("click", (e) => {
                     e.stopPropagation();
                 })
             })
-            
+
             let basketBtns = document.querySelectorAll(".fa-cart-shopping")
-            basketBtns.forEach(basketBtn=>{
-                basketBtn.addEventListener("click",(e)=>{
-                    e.stopPropagation();
-                })
+          basketBtns.forEach(basketBtn => {
+            basketBtn.addEventListener("click", () => {
+                let userInfo = JSON.parse(localStorage.getItem("UserInfo"))
+                if (!userInfo) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Login olmadığınız üçün məhsulu səbətinizə əlavə edə bilməzsiniz!",
+                    }).then(function () {
+                        window.location.href = "login.html";
+                    });
+                } else {
+                    let productId =basketBtn.getAttribute("data-id")
+                    let userId = userInfo
+                    AddProductBasket(userId, productId)
+                }
             })
         })
-
+        })
 
         let favBtns = document.querySelectorAll(".fa-heart")
         favBtns.forEach(favBtn => {
@@ -100,12 +144,10 @@ function ShowProducts(products) {
                     Swal.fire({
                         icon: "error",
                         title: "Oops...",
-                        text: "Login olmadığınız üçün məhsul favorilərə əlavə edə bilməzsiniz!"
+                        text: "Login olmadığınız üçün məhsulu favorilərə əlavə edə bilməzsiniz!"
                     }).then(function () {
                         window.location.href = "login.html";
                     });
-
-
                 } else {
                     let productId = favBtn.getAttribute("data-id")
                     let userId = userInfo
@@ -124,7 +166,6 @@ function ShowProducts(products) {
         })
     });
 }
-
 function AddFavorites(userId, productId) {
     GetDataById(`${BaseUrl}/users`, userId)
         .then(res => {
@@ -143,6 +184,24 @@ function AddFavorites(userId, productId) {
 
         })
 }
+function AddProductBasket(userId, productId) {
+    GetDataById(`${BaseUrl}/users`, userId)
+        .then(res => {
+
+            if (!res.data.favorites.includes(productId)) {
+                res.data.favorites.push(productId)
+                UpdateData(`${BaseUrl}/users`, userId, res.data)
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Bu məhsul artıq səbətinizdə var!"
+                });
+            }
+
+
+        })
+}
 
 
 favPage.addEventListener("click", () => {
@@ -151,7 +210,6 @@ favPage.addEventListener("click", () => {
 basketPage.addEventListener("click", () => {
     window.location.href = "basket.html"
 })
-
 GetProducts()
 
 function AddBasket(productId) {
