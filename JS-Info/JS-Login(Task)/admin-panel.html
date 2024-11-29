@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Axios linki -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+        integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Sweet alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Font awesome linki -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Assets/admin-panel.css">
+    <script type="module" src="./Assets/admin-panel.js" defer></script>
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="add-form">
+            <h1>Admin Add-Form</h1>
+            <div class="input">
+                <label for="model">Phone Model</label>
+                <input type="text" class="form-control" id="model" placeholder="model">
+            </div>
+            <div class="input">
+                <label for="brand">Phone Brand</label>
+                <input type="text" class="form-control" id="brand" placeholder="brand">
+            </div>
+            <div class="input">
+                <label for="operatingSystem">Phone Operating System</label>
+                <input type="text" class="form-control" id="operatingSystem" placeholder="operatingSystem">
+            </div>
+            <div class="input">
+                <label for="year">Year</label>
+                <input type="number" class="form-control" id="year" placeholder="year">
+            </div>
+            <div class="input">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" placeholder="price">
+            </div>
+            <div class="input">
+                <label for="image">Phone Image</label>
+                <input type="file" class="form-control" id="image" placeholder="image file">
+            </div>
+
+            <button type="submit" class="add">Submit</button>
+        </form>
+
+            <table id="form">
+                <h1>Phone Tables</h1>
+                <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Brand</th>
+                <th>Operating System</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Edit</th>
+                <th>Info</th>
+                <th>Delete</th>
+                </tr>
+
+<tbody class="tbody">
+                    <!-- <tr>
+                    <td>id</td>
+                    <td>Model</td>
+                    <td>Brand</td>
+                    <td>Operating System</td>
+                    <td>Year</td>
+                    <td>Price</td>
+                    <td>Image</td>
+                    <td>
+                      <button><i class="fa-regular fa-pen-to-square"></i></button>
+                    </td>
+                    <td>
+                      <button><i class="fa-solid fa-circle-info"></i></button>
+                    </td>
+                    <td>
+                      <button><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                  </tr> -->
+</tbody>
+                  
+            </table>
+    </div>
+
+</body>
+
+
+</html>
