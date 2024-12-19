@@ -1,31 +1,64 @@
-import React, { useState } from 'react'
-import axios from "axios"
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function Weather() {
-    let [data, setData] = useState("")
+    let [country, setCountry] = useState('');
+    let [weatherData, setWeatherData] = useState(null);
+    let [loader, setLoader] = useState(false); 
 
-    function GetDatas() {
-        axios.get("https://api.weatherapi.com/v1/current.json?key=7b1eaf6efd804a44b87101529222212&q={seher_adi}&aqi=no")
+    function GetCountry(city) {
+        setLoader(true);
+        axios
+            .get(`https://api.weatherapi.com/v1/current.json?key=7b1eaf6efd804a44b87101529222212&q=${city}&aqi=no`)
+            .then((res) => {
+                setWeatherData(res.data); 
+            })
+            .then(() => {
+                setLoader(false); 
+            });
     }
+
+    useEffect(() => {
+        GetCountry('Baku'); 
+    }, []);
+
+    function handleGetCountry(e) {
+        e.preventDefault();
+            GetCountry(country); 
+            setCountry(''); 
+            
+    }
+
     return (
         <div>
             <div className="form">
-                <form>
-                    <input type="text" placeholder='ForeCast...' required />
-                    <button>Get ForeCast</button>
+                <form onSubmit={(e) => handleGetCountry(e)}>
+                    <input
+                        type="text"
+                        placeholder="ForeCast..."
+                        required
+                        value={country}
+                        onChange={(e) => setCountry(e.target.value)}
+                    />
+                    <button type="submit">Get ForeCast</button>
                 </form>
-                <div className="content">
-                    <h2>Baki</h2>
-                    <img src="https://cdn.weatherapi.com/weather/64x64/night/176.png" alt="" />
-                    <span>Condition text:Patchy rain nearby</span>
-                    <span>Cloud: 100</span>
-                    <span>Localtime:2024-12-19 23:06</span>
-                    <span>Country:Azerbaijan</span>
-
-                </div>
+                {loader ? (
+                    <div class="loader"></div>
+                ) : weatherData ? (
+                    <div className="content">
+                        <h2>{weatherData.location.name}</h2>
+                        <img src={weatherData.current.condition.icon} alt="" />
+                        <span>Condition: {weatherData.current.condition.text}</span>
+                        <span>Cloud: {weatherData.current.cloud}</span>
+                        <span>Local Time: {weatherData.location.localtime}</span>
+                        <span>Country: {weatherData.location.country}</span>
+                    </div>
+                ) : (
+                    <p>Belə ölkə yoxdur!</p>
+                )}
             </div>
         </div>
-    )
+    );
 }
 
-export default Weather
+export default Weather;
