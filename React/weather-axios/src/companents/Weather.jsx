@@ -6,10 +6,10 @@ function Weather() {
     let [weatherData, setWeatherData] = useState(null);
     let [loader, setLoader] = useState(false); 
 
-    function GetCountry(city) {
+    function GetCountry(country) {
         setLoader(true);
         axios
-            .get(`https://api.weatherapi.com/v1/current.json?key=7b1eaf6efd804a44b87101529222212&q=${city}&aqi=no`)
+            .get(`https://api.weatherapi.com/v1/current.json?key=7b1eaf6efd804a44b87101529222212&q=${country}&aqi=no`)
             .then((res) => {
                 setWeatherData(res.data); 
             })
@@ -24,9 +24,10 @@ function Weather() {
 
     function handleGetCountry(e) {
         e.preventDefault();
+        if (country.trim()) {
             GetCountry(country); 
             setCountry(''); 
-            
+        }
     }
 
     return (
