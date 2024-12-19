@@ -19,9 +19,7 @@ registerForm.addEventListener("submit", (e) => {
         favorites: []
     }
 
-    // Emailin databasede yoxlanmasi eger tekrar emaildirse giris olunmamalidir.
-
-    
+    // Emailin databasede yoxlanmasi eger tekrar emaildirse giris olunmamalidir.    
     GetAllDatas(`${BaseUrl}/users`)
     .then(res => {
         let users = res.datas
