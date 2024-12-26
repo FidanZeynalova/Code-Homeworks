@@ -77,6 +77,9 @@ function Main() {
   // Add formu
   function handleAddProduct(e) {
     e.preventDefault()
+    if(name.trim() == "" || brand.trim() == "" || category.trim() == "" || price.trim() == ""){
+      alert("Bosluglari duzgun doldurun")
+    }
     let newProduct = {
       name: name,
       brand: brand,
@@ -160,8 +163,8 @@ function Main() {
                 <td>{product.brand}</td>
                 <td>{product.price}$</td>
                 <td>{product.category}</td>
-                <td><Button variant="primary" onClick={(id) => handleProductDetail(product.id)}>Detail</Button></td>
-                <td><Button variant="success" onClick={(id) => handleEdit(product.id)}>Edit</Button></td>
+                <td><Button variant="outline-primary" onClick={(id) => handleProductDetail(product.id)}>Detail</Button></td>
+                <td><Button variant="outline-success" onClick={(id) => handleEdit(product.id)}>Edit</Button></td>
                 <td><Button variant="danger" onClick={(id) => handleDelete(product.id)}>Delete</Button></td>
               </tr>
             ))}
