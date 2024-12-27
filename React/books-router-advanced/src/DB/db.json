@@ -1,0 +1,127 @@
+{
+    "books":[
+        [
+            {
+              "id": 1,
+              "title": "Səndən Öncə Mən",
+              "description": "  ",
+              "price": 18.99,
+              "author": "Jojo Moyes",
+              "pagesCount": 480,
+              "publishedYear": 2012,
+              "genre": "Romantik",
+              "language": "Azərbaycanca",
+              "image": "https://www.google.com/imgres?q=S%C9%99nd%C9%99n%20%C3%B6nc%C9%99%20M%C9%99n&imgurl=https%3A%2F%2Fstatic.insales-cdn.com%2Fimages%2Fproducts%2F1%2F4761%2F171070105%2F9963d7a96b3e03dad6271412348121bd.jpg&imgrefurl=https%3A%2F%2Falinino.az%2Fproduct%2Fsenden-once-men&docid=yGCEK24_aKpL3M&tbnid=F4KMTs4gb_Y7GM&vet=12ahUKEwif-d_SkMeKAxUFOnoKHdBBJBYQM3oECBsQAA..i&w=414&h=627&hcb=2&ved=2ahUKEwif-d_SkMeKAxUFOnoKHdBBJBYQM3oECBsQAA"
+            },
+            {
+              "id": 2,
+              "title": "Səndən Sonra Mən",
+              "description": "Səndən Öncə Mən romanının davamı olan bu kitab, Louisa Clark-ın həyatının yeni mərhələsini araşdırır.",
+              "price": 19.99,
+              "author": "Jojo Moyes",
+              "pagesCount": 464,
+              "publishedYear": 2015,
+              "genre": "Romantik",
+              "language": "Azərbaycanca",
+              "image": "https://www.google.com/imgres?q=S%C9%99nd%C9%99n%20Sonra%20M%C9%99n&imgurl=https%3A%2F%2Fstatic.insales-cdn.com%2Fimages%2Fproducts%2F1%2F4740%2F171070084%2F520f44ed3d0956131c54b341975159c9.jpg&imgrefurl=https%3A%2F%2Falinino.az%2Fproduct%2Fsenden-sonra&docid=fyrzVtpBL7V4iM&tbnid=8pmBK3EsaMJrXM&vet=12ahUKEwiY1LHIkMeKAxU4hv0HHf07OlEQM3oECBsQAA..i&w=475&h=690&hcb=2&ved=2ahUKEwiY1LHIkMeKAxU4hv0HHf07OlEQM3oECBsQAA"
+            },
+            {
+              "id": 3,
+              "title": "Siçanlar və Adamlar",
+              "description": "Böyük Depressiya dövründə iki dostun insanlıq dramını təsvir edən təsirli bir hekayə.",
+              "price": 12.99,
+              "author": "John Steinbeck",
+              "pagesCount": 107,
+              "publishedYear": 1937,
+              "genre": "Dram",
+              "language": "Azərbaycanca",
+              "image": "https://www.google.com/imgres?q=Si%C3%A7anlar%20v%C9%99%20Adamlar&imgurl=https%3A%2F%2Fstatic.insales-cdn.com%2Fimages%2Fproducts%2F1%2F6198%2F332986422%2FSteynbek_Sicanlar_ve_adamlar_ESAS.png&imgrefurl=https%3A%2F%2Falinino.az%2Fproduct%2Fsicanlar-ve-adamlar-2&docid=TRTrHtS3s4fAOM&tbnid=FVteicCk4lBoJM&vet=12ahUKEwiujYq2kMeKAxUAcvEDHUDlKJIQM3oECBUQAA..i&w=709&h=1105&hcb=2&ved=2ahUKEwiujYq2kMeKAxUAcvEDHUDlKJIQM3oECBUQAA"
+            },
+            {
+              "id": 4,
+              "title": "Kürk Paltolu Madonna",
+              "description": "Sevginin sirli və fədakar təbiətini araşdıran Türk ədəbiyyatının şah əsərlərindən biri.",
+              "price": 14.99,
+              "author": "Sabahattin Ali",
+              "pagesCount": 160,
+              "publishedYear": 1943,
+              "genre": "Dram",
+              "language": "Türkçə",
+              "image": "https://www.google.com/imgres?q=K%C3%BCrk%20Paltolu%20Madonna&imgurl=https%3A%2F%2Fnovella.az%2Fwp-content%2Fuploads%2F2021%2F12%2FKurk-Mantolu-Madonna.jpg&imgrefurl=https%3A%2F%2Fnovella.az%2Fkitab%2Fkurk-mantolu-madonna&docid=FOnBFdgyMOg8JM&tbnid=aAA05027bAJ8XM&vet=12ahUKEwiZx96rkMeKAxXJSfEDHejoFk8QM3oECBcQAA..i&w=500&h=779&hcb=2&ved=2ahUKEwiZx96rkMeKAxXJSfEDHejoFk8QM3oECBcQAA"
+            },
+            {
+              "id": 5,
+              "title": "Enkaz Altındakılar",
+              "description": "Bir zəlzələ sonrası həyat mübarizəsi və insanlıq dramını təsirli şəkildə təsvir edən hekayə.",
+              "price": 15.99,
+              "author": "Beyza Alkoç",
+              "pagesCount": 320,
+              "publishedYear": 2021,
+              "genre": "Dram",
+              "language": "Türkçə",
+              "image": "https://www.google.com/imgres?q=Enkaz%20Alt%C4%B1ndak%C4%B1lar&imgurl=https%3A%2F%2Fwww.libraff.az%2Fimages%2Ffrom_1c%2Ff8d65a98-db52-11ec-a501-503eaa120fc7_1.jpg&imgrefurl=https%3A%2F%2Fwww.libraff.az%2Fkitab%2Fbdii-dbiyyat%2Fromanlar-and-novellalar%2Fenkaz-altndakiler%2F%3Fsl%3Den&docid=wRGh7pQAewWO-M&tbnid=7VswHDM2IQvOeM&vet=12ahUKEwj-3NKikMeKAxVnQfEDHZ8vFOYQM3oECBkQAA..i&w=500&h=500&hcb=2&ved=2ahUKEwj-3NKikMeKAxVnQfEDHZ8vFOYQM3oECBkQAA"
+            },
+            {
+              "id": 6,
+              "title": "Şeker Portakalı",
+              "description": "Kasıb bir ailədə böyüyən balaca Zezenin duyğusal və dərslərlə dolu uşaqlıq hekayəsi.",
+              "price": 14.99,
+              "author": "José Mauro de Vasconcelos",
+              "pagesCount": 192,
+              "publishedYear": 1968,
+              "genre": "Dram",
+              "language": "Türkçə",
+              "image": "https://www.google.com/imgres?q=%C5%9Feker%20portakal%C4%B1&imgurl=https%3A%2F%2Fimages.sosyopix.com%2Fproduct-images%2Fv2%2F10472%2Fproductdetailimageseker-portakali-1240x1240.jpg&imgrefurl=https%3A%2F%2Fwww.sosyopix.com%2Fseker-portakali-p-10472&docid=rQ6oSJrfVnjI4M&tbnid=kaK99x1jk9ij7M&vet=12ahUKEwjkxpGakMeKAxWwA9sEHan4MAsQM3oECFIQAA..i&w=640&h=640&hcb=2&ved=2ahUKEwjkxpGakMeKAxWwA9sEHan4MAsQM3oECFIQAA"
+            },
+            {
+              "id": 7,
+              "title": "Bilinməyən Qadının Məktubu",
+              "description": "Bir qadının həyat boyu sevib, amma heç vaxt qarşılıq ala bilmədiyi kişiyə yazdığı təsirli məktub.",
+              "price": 11.99,
+              "author": "Stefan Zweig",
+              "pagesCount": 72,
+              "publishedYear": 1922,
+              "genre": "Psixoloji Dram",
+              "language": "Azərbaycanca",
+              "image": "https://www.google.com/imgres?q=Bilinm%C9%99y%C9%99n%20Qad%C4%B1n%C4%B1n%20M%C9%99ktubu&imgurl=https%3A%2F%2Fgunlerden.wordpress.com%2Fwp-content%2Fuploads%2F2017%2F07%2F8e7455cc4f6fcc0e8f2bcfe4440a788d.jpg%3Fw%3D350%26h%3D510%26crop%3D1&imgrefurl=https%3A%2F%2Fgunlerden.wordpress.com%2F2017%2F07%2F21%2Fstefan-zweig-bilinmeyen-bir-kadinin-mektubu%2F&docid=ZVb7e6-cbpNeIM&tbnid=dpqtYSl86XMa9M&vet=12ahUKEwi6u9WLkMeKAxXHQ_EDHf8MCT4QM3oECGcQAA..i&w=350&h=510&hcb=2&ved=2ahUKEwi6u9WLkMeKAxXHQ_EDHf8MCT4QM3oECGcQAA"
+            },
+            {
+              "id": 8,
+              "title": "Pandalar Uça Bilir",
+              "description": "Gənclik illərindəki duyğular, itkilər və ümidlər haqqında təsirli bir hekayə.",
+              "price": 13.99,
+              "author": "Caner Yaman",
+              "pagesCount": 224,
+              "publishedYear": 2016,
+              "genre": "Gənclik Ədəbiyyatı",
+              "language": "Türkçə",
+              "image": "https://www.google.com/imgres?q=Pandalar%20U%C3%A7a%20Bilir&imgurl=https%3A%2F%2Fwww.nezih.com.tr%2Fpandalar-ucabilir-176550-93-B.jpg&imgrefurl=https%3A%2F%2Fwww.nezih.com.tr%2Fpandalar-ucabilir&docid=KH4L6gJwXaJ9RM&tbnid=rH8MUVvPYhmY-M&vet=12ahUKEwjr2NCCkMeKAxXaSvEDHQR9BwwQM3oECBsQAA..i&w=1000&h=1000&hcb=2&ved=2ahUKEwjr2NCCkMeKAxXaSvEDHQR9BwwQM3oECBsQAA"
+            },
+            {
+              "id": 9,
+              "title": "Çərpənəng Uçuran",
+              "description": "Bir gəncin həyatını dəyişdirən hadisələr və özünü tapma yolunda yaşadığı həyəcanlı anlar.",
+              "price": 14.99,
+              "author": "Xalid Hüseyn",
+              "pagesCount": 180,
+              "publishedYear": 2018,
+              "genre": "Dram",
+              "language": "Azərbaycanca",
+              "image": "https://www.google.com/imgres?q=cerpeleng%20ucuran%20&imgurl=https%3A%2F%2Fkontakt.az%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Fa404967cc40694dc557cd869288440a4%2Ft%2Fm%2Ftm-dg-kta-1119-tr-0012_4.png&imgrefurl=https%3A%2F%2Fkontakt.az%2Fkitab-cerpeleng-ucuran&docid=sQjFsCsnvsTgWM&tbnid=_-SyRPKx6SBXMM&vet=12ahUKEwjCzrXmj8eKAxVAQPEDHSxUKu0QM3oECBYQAA..i&w=608&h=608&hcb=2&ved=2ahUKEwjCzrXmj8eKAxVAQPEDHSxUKu0QM3oECBYQAA"
+            },
+            {
+              "id": 10,
+              "title": "Süt və Bal",
+              "description": "Südün və balın hər biri öz hekayəsini danışan simvollardır. Gənclərin həyatında qarşılaşdıqları sevgi və çətinliklər haqqında bir roman.",
+              "price": 16.99,
+              "author": "Rupi Kaur",
+              "pagesCount": 256,
+              "publishedYear": 2020,
+              "genre": "Romantik Drama",
+              "language": "Türkçə",
+              "image": "https://www.google.com/imgres?q=sut%20ve%20bal&imgurl=https%3A%2F%2Fcdn.cimri.io%2Fimage%2F160x160%2Fsut-ve-bal-rupi-kaur_209576410.jpg&imgrefurl=https%3A%2F%2Fwww.cimri.com%2Fsiir-kitaplari%2Fen-ucuz-sut-ve-bal-rupi-kaur-9786052992432-fiyatlari%2C48308032&docid=rnGV_7YYkwwfmM&tbnid=mif91wj6Upk8kM&vet=12ahUKEwiLq4z3j8eKAxXIRfEDHSB8JLEQM3oECFwQAA..i&w=160&h=160&hcb=2&ved=2ahUKEwiLq4z3j8eKAxXIRfEDHSB8JLEQM3oECFwQAA"
+            }
+          ]
+    ]
+}
+  
