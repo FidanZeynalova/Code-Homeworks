@@ -2,9 +2,9 @@ import React from 'react'
 
 function AdminFooter() {
   return (
-    <div>
-      <h1>Admin footer</h1>
-    </div>
+    <div className='admin-footer'>
+    <span>This is the footer of the user page.</span>
+  </div>
   )
 }
 

@@ -2,8 +2,8 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div>
-      <h1>Bura Admin Dashboarddir</h1>
+    <div className='admin-dashboard'>
+      <h1>Welcome Admin!</h1>
     </div>
   )
 }
