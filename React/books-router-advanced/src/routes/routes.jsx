@@ -1,5 +1,6 @@
 import AddBook from "../pages/Admin/AddBook/AddBook";
 import AdminRoot from "../pages/Admin/AdminRoot";
+import AdminBookDetail from "../pages/Admin/BookDetail/AdminBookDetail";
 import AdminBooks from "../pages/Admin/Books/AdminBooks";
 import Dashboard from "../pages/Admin/Dasboard/Dashboard";
 import EditBook from "../pages/Admin/EditBook/EditBook";
@@ -59,7 +60,7 @@ const ROUTES = [
             },
             {
                 path: "books/:id",
-                element: <BookDetail />
+                element: <AdminBookDetail />
             },
             {
                 path: "add",

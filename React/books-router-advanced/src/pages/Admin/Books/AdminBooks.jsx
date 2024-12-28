@@ -1,28 +1,17 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useContext} from 'react'
 import { Link } from 'react-router-dom'
+import { BooksContent } from '../../../context/BooksContext'
 
 
 function AdminBooks() {
-  let [books, setBooks] = useState([])
-
-
-  useEffect(() => {
-    axios.get("http://localhost:4000/books")
-      .then((res) => {
-        setBooks(res.data)
-        console.log(books);
-        
-      })
-  }, [])
+ let { books ,setBooks} = useContext(BooksContent)
   // Delete
   async function handleDelete(id) {
    await axios.delete(`http://localhost:4000/books/${id}`)
-    .then((res)=>{
+    .then(()=>{
       let filterBooks = books.filter((book) => book.id !== id)
       setBooks(filterBooks)
-      console.log(filterBooks);
-      console.log(id);
       
     })
   }

@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useFormik } from "formik"
 import axios from 'axios'
 import * as Yup from 'yup';
+import { BooksContent } from '../../../context/BooksContext';
 
 function AddBook() {
-  let[title,setTitle] = useState("")
+  let {setBooks} = useContext(BooksContent)
   const formik = useFormik({
     initialValues: {
       title: '',
@@ -51,11 +52,7 @@ function AddBook() {
     }),
     onSubmit: values => {
       axios.post("http://localhost:4000/books", values)
-        .then((res) => {
-          console.log(res.data);
-          console.log(values);
-          setTitle("")
-        })
+        .then((res) => {})
     }
     
 
