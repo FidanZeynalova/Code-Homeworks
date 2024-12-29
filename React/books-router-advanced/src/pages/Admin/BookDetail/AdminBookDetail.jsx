@@ -24,7 +24,7 @@ function AdminBookDetail() {
           <p>{book.description}</p>
           <p>{book.price}$</p>
           <p>{book.language}</p>
-          <button><Link to="/admin" className='Link'>Go Back</Link></button>
+          <button><Link to="/admin/books" className='Link'>Go Back</Link></button>
         </div>
       </div>
     </div>

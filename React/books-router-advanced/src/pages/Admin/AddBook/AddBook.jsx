@@ -3,9 +3,11 @@ import { useFormik } from "formik"
 import axios from 'axios'
 import * as Yup from 'yup';
 import { BooksContent } from '../../../context/BooksContext';
+import { useNavigate } from 'react-router';
 
 function AddBook() {
-  let {setBooks} = useContext(BooksContent)
+  let { books, setBooks } = useContext(BooksContent)
+  let navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       title: '',
@@ -14,6 +16,7 @@ function AddBook() {
       price: '',
       pagesCount: '',
       publishedYear: '',
+      genre: '',
       language: '',
       image: ''
     },
@@ -42,6 +45,10 @@ function AddBook() {
         .required('Pages count is required'),
       publishedYear: Yup.number()
         .required('Published year is required'),
+      genre: Yup.string()
+        .min(3, 'Author must be at least 3 characters')
+        .max(15, 'Author must be 15 characters or less')
+        .required('Author is required'),
       language: Yup.string()
         .min(3, 'Language must be at least 3 characters')
         .max(20, 'Language must be 20 characters or less')
@@ -52,9 +59,13 @@ function AddBook() {
     }),
     onSubmit: values => {
       axios.post("http://localhost:4000/books", values)
-        .then((res) => {})
+        .then(() => {
+          setBooks([...books])
+        })
+      navigate("/admin/books")
+
     }
-    
+
 
   })
   return (
@@ -62,13 +73,13 @@ function AddBook() {
       <h1>Add Book</h1>
       <form onSubmit={formik.handleSubmit}>
         <div className="input">
-          <label htmlFor="title">Title</label>
+          <label htmlFor="title"></label>
           <input type="text" placeholder='New Book Title'
             name="title"
             onChange={formik.handleChange}
             value={formik.values.title} />
           {formik.touched.title && formik.errors.title && (
-            <div className="error">{formik.errors.title}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.title}</div>
           )}
         </div>
         <div className="input">
@@ -76,7 +87,7 @@ function AddBook() {
           <input type="text" placeholder='New Book Description' name='description' onChange={formik.handleChange}
             value={formik.values.description} />
           {formik.touched.description && formik.errors.description && (
-            <div className="error">{formik.errors.description}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.description}</div>
           )}
         </div>
         <div className="input">
@@ -84,7 +95,7 @@ function AddBook() {
           <input type="text" placeholder='New Book Author' name='author' onChange={formik.handleChange}
             value={formik.values.author} />
           {formik.touched.author && formik.errors.author && (
-            <div className="error">{formik.errors.author}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.author}</div>
           )}
         </div>
         <div className="input">
@@ -92,7 +103,7 @@ function AddBook() {
           <input type="number" placeholder='New Book Price' name='price' onChange={formik.handleChange}
             value={formik.values.price} />
           {formik.touched.price && formik.errors.price && (
-            <div className="error">{formik.errors.price}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.price}</div>
           )}
         </div>
         <div className="input">
@@ -100,7 +111,7 @@ function AddBook() {
           <input type="number" placeholder='New Book Pages Count' name='pagesCount' onChange={formik.handleChange}
             value={formik.values.pagesCount} />
           {formik.touched.pagesCount && formik.errors.pagesCount && (
-            <div className="error">{formik.errors.pagesCount}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.pagesCount}</div>
           )}
         </div>
         <div className="input">
@@ -108,7 +119,15 @@ function AddBook() {
           <input type="number" placeholder='New Book Published Year' name='publishedYear' onChange={formik.handleChange}
             value={formik.values.publishedYear} />
           {formik.touched.publishedYear && formik.errors.publishedYear && (
-            <div className="error">{formik.errors.publishedYear}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.publishedYear}</div>
+          )}
+        </div>
+        <div className="input">
+          <label htmlFor="genre"></label>
+          <input type="text" placeholder='New Book Genre' name='genre' onChange={formik.handleChange}
+            value={formik.values.genre} />
+          {formik.touched.genre && formik.errors.genre && (
+            <div className="error" style={{ color: "red" }}>{formik.errors.genre}</div>
           )}
         </div>
         <div className="input">
@@ -116,7 +135,7 @@ function AddBook() {
           <input type="text" placeholder='New Book Language' name='language' onChange={formik.handleChange}
             value={formik.values.language} />
           {formik.touched.language && formik.errors.language && (
-            <div className="error">{formik.errors.language}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.language}</div>
           )}
         </div>
         <div className="input">
@@ -124,7 +143,7 @@ function AddBook() {
           <input type="text" placeholder='New Book Image' name='image' onChange={formik.handleChange}
             value={formik.values.image} />
           {formik.touched.image && formik.errors.image && (
-            <div className="error">{formik.errors.image}</div>
+            <div className="error" style={{ color: "red" }}>{formik.errors.image}</div>
           )}
         </div>
         <button type="submit">Add</button>

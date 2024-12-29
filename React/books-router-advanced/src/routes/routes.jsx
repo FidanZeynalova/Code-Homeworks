@@ -67,7 +67,7 @@ const ROUTES = [
                 element: <AddBook />
             },
             {
-                path: "edit",
+                path: "edit/:id",
                 element: <EditBook />
             }
         ]

@@ -8,8 +8,6 @@ import { BasketContext } from '../../../context/basketContext';
 function Favorites() {
   let { favBooks, setFavBooks } = useContext(FavoritesContext)
    let {basketBooks,setBasketBooks} = useContext(BasketContext)
-  
-  console.log(favBooks);
 
   function handleDelete(id) {
     let filtered = favBooks.filter(favBook => favBook.id !== id)
@@ -33,7 +31,7 @@ function Favorites() {
         {
           favBooks.length == 0 ? (
             <div className="fav-head">
-              <h1>Favorites is empty!</h1>
+              <h1>Favorites is empty!😓</h1>
               <button><Link to="/books" className='link' style={{ textDecoration: "none" }}>Go Shopping!</Link></button>
             </div>
           ) : (

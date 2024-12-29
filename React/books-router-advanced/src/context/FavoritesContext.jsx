@@ -4,6 +4,7 @@ export const FavoritesContext = createContext()
 function FavoritesContextProvider({ children }) {
     let localFavs = JSON.parse(localStorage.getItem("favorites"))
     let [favBooks, setFavBooks] = useState(localFavs ? localFavs : [])
+    
 
     useEffect(() => {
         localStorage.setItem("favorites", JSON.stringify(favBooks))
@@ -11,7 +12,7 @@ function FavoritesContextProvider({ children }) {
 
     const value = {
         favBooks,
-        setFavBooks
+        setFavBooks 
     }
     return (
         <FavoritesContext.Provider value={value}>
