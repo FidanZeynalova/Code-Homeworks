@@ -100,7 +100,7 @@
 }
 
 .fav-head,
-.basket-head {
+.basket-head,.not-found {
   position: absolute;
   top: 50%;
   left: 50%;

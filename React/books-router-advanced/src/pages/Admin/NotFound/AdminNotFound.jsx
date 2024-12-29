@@ -2,9 +2,9 @@ import React from 'react'
 
 function AdminNotFound() {
   return (
-    <div>
-      <h1>Not Found</h1>
-    </div>
+    <div className='not-found'>
+    <h1>Error 404 Not Found!🙂</h1>
+  </div>
   )
 }
 
