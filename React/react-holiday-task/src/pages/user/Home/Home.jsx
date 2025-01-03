@@ -5,6 +5,7 @@ import UserThree from "../../../components/User/UserThree/UserThree";
 import SectionFour from "../../../components/User/SectionFour/SectionFour";
 import SectionFive from "../../../components/User/SectionFive/SectionFive";
 import Contact from "../../../components/User/Contact/Contact";
+import SectionSeven from "../../../components/User/SectionSeven/SectionSeven";
 
 function Home() {
 
@@ -15,6 +16,7 @@ function Home() {
 <UserThree/>
 <SectionFour/>
 <SectionFive/>
+<SectionSeven/>
 <Contact/>
     </>
   );
