@@ -6,6 +6,7 @@ import SectionFour from "../../../components/User/SectionFour/SectionFour";
 import SectionFive from "../../../components/User/SectionFive/SectionFive";
 import Contact from "../../../components/User/Contact/Contact";
 import SectionSeven from "../../../components/User/SectionSeven/SectionSeven";
+import SectionEight from "../../../components/User/SectionEight/SectionEight";
 
 function Home() {
 
@@ -17,6 +18,7 @@ function Home() {
 <SectionFour/>
 <SectionFive/>
 <SectionSeven/>
+<SectionEight/>
 <Contact/>
     </>
   );
