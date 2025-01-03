@@ -1,3 +1,10 @@
+import NotFound from "../components/Admin/NotFound/NotFound";
+import NotPage from "../components/User/NotPage/NotPage";
+import Add from "../pages/admin/Add/Add";
+import AdminDetail from "../pages/admin/AdminDetail/AdminDetail";
+import AdminRoot from "../pages/admin/AdminRoot";
+import Dashboard from "../pages/admin/Dashboard/Dashboard";
+import Edit from "../pages/admin/Edit/Edit";
 import Basket from "../pages/user/Basket/Basket";
 import Detail from "../pages/user/Detail/Detail";
 import Favorites from "../pages/user/Favorites/Favorites";
@@ -26,6 +33,36 @@ const ROUTES = [
             {
                 path:"/:id",
                 element:<Detail/>
+            },
+            {
+                path:"*",
+                element:<NotPage/>
+            }
+        ]
+    },
+    {
+        path:'/admin',
+        element:<AdminRoot/>,
+        children:[
+            {
+                path:'add',
+                element:<Add/>
+            },
+            {
+                path:':id',
+                element:<AdminDetail/>
+            },
+            {
+                path:'',
+                element:<Dashboard/>
+            },
+            {
+                path:'edit',
+                element:<Edit/>
+            },
+            {
+                path:'*',
+                element:<NotFound/>
             }
         ]
     }
