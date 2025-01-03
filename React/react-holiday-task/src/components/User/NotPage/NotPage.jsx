@@ -2,8 +2,11 @@ import React from 'react'
 
 function NotPage() {
   return (
-    <div>
-      <h1>User Not Page</h1>
+    <div className='user-notFound'>
+   <div className="container">
+   <h1>OPPS!</h1>
+   <span>Not Found Error</span>
+   </div>
     </div>
   )
 }

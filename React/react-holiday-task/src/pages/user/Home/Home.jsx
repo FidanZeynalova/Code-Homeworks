@@ -7,6 +7,8 @@ import SectionFive from "../../../components/User/SectionFive/SectionFive";
 import Contact from "../../../components/User/Contact/Contact";
 import SectionSeven from "../../../components/User/SectionSeven/SectionSeven";
 import SectionEight from "../../../components/User/SectionEight/SectionEight";
+import SectionTen from "../../../components/User/SectionTen/SectionTen";
+import SectionSix from "../../../components/User/SectionSix/SectionSix";
 
 function Home() {
 
@@ -17,8 +19,10 @@ function Home() {
 <UserThree/>
 <SectionFour/>
 <SectionFive/>
+<SectionSix/>
 <SectionSeven/>
 <SectionEight/>
+<SectionTen/>
 <Contact/>
     </>
   );

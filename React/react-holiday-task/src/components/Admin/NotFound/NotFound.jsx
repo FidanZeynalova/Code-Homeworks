@@ -2,9 +2,12 @@ import React from 'react'
 
 function NotFound() {
   return (
-    <div>
-      <h1>Admin notFound</h1>
+    <div className='admin-notFound'>
+    <div className="container">
+    <h1>OPPS!</h1>
+    <span>Not Found Error</span>
     </div>
+     </div>
   )
 }
 
