@@ -85,8 +85,10 @@ function Basket() {
             <h1>Your basket is empty🦋</h1>
             <button><Link to={"/"} style={{color:"white",textDecoration:"none"}}>Go Shopping!</Link></button>
           </div>
+          
         ) : (
-          <Table striped bordered hover>
+          
+          <Table striped bordered hover >
             <thead>
               <tr>
                 <th>Image</th>

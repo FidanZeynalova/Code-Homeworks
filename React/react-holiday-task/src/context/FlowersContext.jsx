@@ -6,13 +6,13 @@ function FlowersContextProvider({children}) {
     let [flowers,setFlowers] = useState([])
     let [originalFlowers,setOriginalFlowers] = useState([])
 
-useEffect(()=>{
-    axios.get("http://localhost:4000/flowers")
-    .then(res =>{
-        setFlowers(res.data)
-        setOriginalFlowers(res.data)
-    },[])
-})
+    useEffect(() => {
+      axios.get("http://localhost:4000/flowers")
+          .then(res => {
+              setFlowers(res.data)
+              setOriginalFlowers(res.data)
+          })
+  }, [])
 
     const value = {
         flowers,setFlowers,
@@ -20,11 +20,9 @@ useEffect(()=>{
     }
 
   return (
-    <div>
       <FlowersContext.Provider value={value}>
         {children}
       </FlowersContext.Provider>
-    </div>
   )
 }
 
