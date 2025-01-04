@@ -11,10 +11,10 @@ function AdminNavbar() {
      
    <div className="nav">
      <ul>
-       <li><Link to="" style={{color:"#f460a6"}}>Home</Link></li>
-       <li><Link to={""}>Dashboard</Link></li>
-       <li><Link to={"add"}>Add</Link></li>
-       <li><Link to={"edit"}>Edit</Link></li>
+       <li><Link to="" style={{color:"#f460a6",textDecoration:"none"}}>Home</Link></li>
+       <li><Link to={""} style={{textDecoration:"none"}}>Dashboard</Link></li>
+       <li><Link to={"add"} style={{textDecoration:"none"}}>Add</Link></li>
+       <li><Link to={"edit"} style={{textDecoration:"none"}}>Edit</Link></li>
      </ul>
    </div>
    {/* <div className="search">

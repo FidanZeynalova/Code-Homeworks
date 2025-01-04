@@ -30,7 +30,7 @@ const ROUTES = [
                 path:"/basket",
                 element:<Basket/>
             },
-            {
+            {   
                 path:"/:id",
                 element:<Detail/>
             },

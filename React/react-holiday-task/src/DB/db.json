@@ -3,51 +3,61 @@
         {
             "name":"Fly Me To The Moon",
             "price":27.55,
+            "description":"Flowers are nature's most exquisite creations, symbolizing beauty and elegance.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-1.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":37.99,
+            "description":"Each flower variety carries unique meanings, such as love, hope, or gratitude.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-2.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":42.42,
+            "description":"Roses, with their velvety petals, are often associated with romance and passion.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-3.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":49.99,
+            "description":"Lilies are admired for their graceful form and are a symbol of purity.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-4.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":54.34,
+            "description":"Sunflowers stand tall and vibrant, representing loyalty and longevity.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-5.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":22.10,
+            "description":"Orchids are exotic flowers that embody luxury, beauty, and strength.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-6.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":10.99,
+            "description":"The delicate cherry blossom is a fleeting symbol of renewal and the passage of time.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-7.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":29.49,
+            "description":"Tulips, with their simple yet bold design, signify perfect love.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-8.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":22.34,
+            "description":"Daisies are cheerful flowers often linked to innocence and new beginnings.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-9.jpg.webp"
         },
         {
             "name":"Fly Me To The Moon",
             "price":25.55,
+            "description":"Flowers play a crucial role in pollination, supporting ecosystems worldwide.",
             "image":"https://preview.colorlib.com/theme/florist/img/product/product-10.jpg.webp"
         }
     ]
